@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_813b73b3-16f8-44ce-871a-bb0de385a704",
+      "org_id": "user_35422001-805a-45dd-9433-ca8481caa1e7",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_813b73b3-16f8-44ce-871a-bb0de385a704.git",
+      "name": "dodocho",
+      "alias": "dodocho"
+    }
+  ]
+}
