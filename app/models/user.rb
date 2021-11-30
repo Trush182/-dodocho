@@ -3,4 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :rooms, foreign_key: :host_id
+  has_many :housing_requests, through: :rooms
+
+  has_many :requests, class_name: "HousingRequest", foreign_key: :seeker_id
 end
