@@ -8,4 +8,7 @@ class User < ApplicationRecord
   has_many :housing_requests, through: :rooms
 
   has_many :requests, class_name: "HousingRequest", foreign_key: :seeker_id
+
+  validates :name, presence: true
+  validates :description, presence: true
 end
