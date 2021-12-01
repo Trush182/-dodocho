@@ -6,67 +6,67 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning DB..."
-HousingRequests.destroy_all
-Rooms.destroy_all
+Room.destroy_all
 User.destroy_all
+HousingRequest.destroy_all
 
 # SEEKERS **************************************************************
 
- puts "Creating Seekers..."
+puts "Creating Seekers..."
 
-thomas = Seeker.create!(
+thomas = User.create!(
   name: "Thomas",
   description: "J'ai besoin de dormir 2 nuits quelque part",
   email: "thomas@gmail.com",
   password: "secret",
-  profile_image: "#",
+  profile_image: "#"
 )
 
-aline = Seeker.create!(
+aline = User.create!(
   name: "Aline",
   description: "En panne de voiture dans le coin, possibilité de m'héberger?",
   email: "aline@gmail.com",
   password: "secret",
-  profile_image: "#",
+  profile_image: "#"
 )
 
 # HOSTS *****************************************************************
 puts "Creating Hosts..."
 
-romain = Host.create!(
+romain = User.create!(
   name: "Romain",
   description: "J'ai une chambre disponible pour qui en a besoin",
   email: "romain@gmail.com",
   password: "secret",
   profile_image: "#",
-  phone_number: "0615717634",
+  phone_number: "0615717634"
 )
 
-josiane = Host.create!(
+josiane = User.create!(
   name: "Josiane",
   description: "J'ai une chambre disponible pour qui en a besoin",
   email: "josiane@gmail.com",
   password: "secret",
   profile_image: "#",
-  phone_number: "0682964512",
+  phone_number: "0682964512"
 )
 
- luis = Host.create!(
+ luis = User.create!(
   name: "Luis",
   description: "J'ai une chambre disponible pour qui en a besoin",
   email: "luis@gmail.com",
   password: "secret",
   profile_image: "#",
-  phone_number: "0648505253",
+  phone_number: "0648505253"
 )
 
-hubert = Host.create!(
+hubert = User.create!(
   name: "Hubert",
   description: "J'ai une chambre disponible pour qui en a besoin",
   email: "hubert@gmail.com",
   password: "secret",
   profile_image: "#",
-  phone_number: "0610193033",
+  phone_number: "0610193033"
 )
 
 # ROOMS *****************************************************************
@@ -82,7 +82,7 @@ room_romain = Room.new(
   has_books:                  false,
   has_personal_bathroom:      true,
   has_tv:                     false,
-  has_internet:               true,
+  has_internet:               true
 )
 room_romain.save!
 
@@ -97,7 +97,7 @@ room_josiane = Room.new(
   has_books:                  true,
   has_personal_bathroom:      false,
   has_tv:                     true,
-  has_internet:               false,
+  has_internet:               false
 )
 room_josiane.save!
 
@@ -111,7 +111,7 @@ room_luis = Room.new(
   has_books:                  false,
   has_personal_bathroom:      false,
   has_tv:                     true,
-  has_internet:               true,
+  has_internet:               true
 )
 room_luis.save!
 
@@ -125,7 +125,7 @@ room_hubert = Room.new(
   has_books:                  true,
   has_personal_bathroom:      true,
   has_tv:                     true,
-  has_internet:               false,
+  has_internet:               false
 )
 room_hubert.save!
 
