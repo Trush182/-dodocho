@@ -22,6 +22,9 @@ thomas = User.create!(
   profile_image: "#"
 )
 
+thomas_profile_pic = File.open(Rails.root.join('db/fixtures/users', 'thomas.jpg'))
+thomas.picture.attach(io: thomas_profile_pic, filename: 'thomas.jpg', content_type: 'image/jpg')
+
 aline = User.create!(
   name: "Aline",
   description: "En panne de voiture dans le coin, possibilité de m'héberger?",
@@ -51,7 +54,7 @@ josiane = User.create!(
   phone_number: "0682964512"
 )
 
- luis = User.create!(
+luis = User.create!(
   name: "Luis",
   description: "J'ai une chambre disponible pour qui en a besoin",
   email: "luis@gmail.com",

@@ -1,4 +1,6 @@
 class Room < ApplicationRecord
+  has_many_attached :photo
+
   belongs_to :host, class_name: "User"
   has_many :housing_requests
 
