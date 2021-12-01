@@ -6,9 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning DB..."
-Room.destroy_all
-User.destroy_all
 HousingRequest.destroy_all
+puts "HousingRequest Destroyed"
+Room.destroy_all
+puts "Room Destroyed"
+User.destroy_all
+puts "User Destroyed"
 
 # SEEKERS **************************************************************
 
@@ -17,13 +20,13 @@ puts "Creating Seekers..."
 thomas = User.create!(
   name: "Thomas",
   description: "J'ai besoin de dormir 2 nuits quelque part",
-  email: "thomas@gmail.com",
+  email: "thomas@gmail2.com",
   password: "secret",
   profile_image: "#"
 )
 
 thomas_profile_pic = File.open(Rails.root.join('db/fixtures/users', 'thomas.jpg'))
-thomas.picture.attach(io: thomas_profile_pic, filename: 'thomas.jpg', content_type: 'image/jpg')
+thomas.photo.attach(io: thomas_profile_pic, filename: 'thomas.jpg', content_type: 'image/jpg')
 
 aline = User.create!(
   name: "Aline",
@@ -32,6 +35,9 @@ aline = User.create!(
   password: "secret",
   profile_image: "#"
 )
+
+aline_profile_pic = File.open(Rails.root.join('db/fixtures/users', 'aline.jpg'))
+aline.photo.attach(io: aline_profile_pic, filename: 'aline.jpg', content_type: 'image/jpg')
 
 # HOSTS *****************************************************************
 puts "Creating Hosts..."
@@ -88,6 +94,9 @@ room_romain = Room.new(
   has_internet:               true
 )
 room_romain.save!
+
+room_romain_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_romain.jpg'))
+room_romain.photos.attach(io: room_romain_profile_pic, filename: 'room_romain.jpg', content_type: 'image/jpg')
 
 room_josiane = Room.new(
 
