@@ -5,12 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+puts "Cleaning DB..."
 HousingRequests.destroy_all
 Rooms.destroy_all
 User.destroy_all
 
 # SEEKERS **************************************************************
+
+ puts "Creating Seekers..."
 
 thomas = Seeker.create!(
   name: "Thomas",
@@ -29,6 +31,7 @@ aline = Seeker.create!(
 )
 
 # HOSTS *****************************************************************
+puts "Creating Hosts..."
 
 romain = Host.create!(
   name: "Romain",
@@ -67,10 +70,12 @@ hubert = Host.create!(
 )
 
 # ROOMS *****************************************************************
+puts "Creating Rooms..."
 
 room_romain = Room.new(
   host:                       romain,
-  summary:                    "Chambre indépendante 1",
+  title:                      "Chambre indépendante dans T3",
+  summary:                    "Mon coloc n'étant pas là, je propose sa chambre pour une personne en galère de logement",
   address:                    "4, rue Henri Cochard 44000 NANTES",
   housing_type:               "personal room",
   giveaway_description:       "",
@@ -84,7 +89,8 @@ room_romain.save!
 room_josiane = Room.new(
 
   host:                       josiane,
-  summary:                    "",
+  title:                      "Jolie chambre dans annexe",
+  summary:                    "Jolie petite chambre située dans l'annexe de ma maison, disponible en ce moment",
   address:                    "280, Boulevard de la Liberté 44000 NANTES",
   housing_type:               "personal room",
   giveaway_description:       "",
@@ -97,10 +103,11 @@ room_josiane.save!
 
 room_luis = Room.new(
   host:                       luis,
-  summary:                    ""
+  title:                      "Chambre partagée dans mon studio",
+  summary:                    "Si quelqu'un dans le besoin, propose un lit d'appoint dans mon studio",
   address:                    "6, rue du Pont aux choux 44000 NANTES",
   housing_type:               "shared room",
-  giveaway_description:
+  giveaway_description:       "",
   has_books:                  false,
   has_personal_bathroom:      false,
   has_tv:                     true,
@@ -110,13 +117,16 @@ room_luis.save!
 
 room_hubert = Room.new(
   host:                       hubert,
-  summary:
+  title:                      "Chambre d'ami à disposition",
+  summary:                    "Je propose ma chambre d'ami innocupée en ce moment",
   address:                    "280, rue des Guépins 44000 NANTES ",
   housing_type:               "personal room",
-  giveaway_description:
+  giveaway_description:       "",
   has_books:                  true,
   has_personal_bathroom:      true,
   has_tv:                     true,
   has_internet:               false,
 )
 room_hubert.save!
+
+# puts "Creating Housing Requests"
