@@ -1,0 +1,30 @@
+<h1>Hello world !!!!</h1>
+
+
+<div class="container my-5">
+  <div class="cards border-solid-black">
+    <% @rooms.each do |room| %>
+      <%= link_to room_path(room), class:"link-no-decoration" do %>
+        <div class="card-product my-30">
+          <%= cl_image_tag room.photos.key %>
+          <div class="card-product-infos">
+            <h3><%= room.title %></h3>
+            <% if room.has_tv %>
+              <i class="fas fa-1x fa-tv"></i>
+            <% end %>
+            <% if room.has_internet %>
+              <i class="fas fa-1x fa-wifi"></i>
+            <% end %>
+            <% if room.has_books %>
+              <i class="fas fa-1x fa-book"></i>
+            <% end %>
+            <% if room.has_personal_bathroom %>
+              <i class="fas fa-1x fa-sink"></i>
+            <% end %>
+            <p> <%= room.summary %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
