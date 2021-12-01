@@ -1,2 +1,0 @@
-class SeekersController < ApplicationController
-end
