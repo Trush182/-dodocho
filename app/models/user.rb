@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_one_attached :photo
+
   has_many :rooms, foreign_key: :host_id
   has_many :housing_requests, through: :rooms
 
