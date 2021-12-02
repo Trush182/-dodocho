@@ -1,8 +1,15 @@
 class Seeker::HousingRequestsController < ApplicationController
   def index
-    @housing_requests = HousingRequest.all
+    @user = current_user
+    @requests = @user.requests
   end
 
-  def create
-  end
+  # def create
+  # end
+
+  # private
+
+  # def rooms_params
+  #   params.require(:room).permit(:id)
+  # end
 end

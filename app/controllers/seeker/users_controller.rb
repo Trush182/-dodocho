@@ -1,6 +1,6 @@
-class Seeker::ProfilesController < ApplicationController
+class Seeker::UsersController < ApplicationController
   def edit
-    @profile = @seeker.find(params[:seeker_id])
+    @user = current_user
 
   end
 

@@ -1,5 +1,7 @@
 
 <div class="container">
+  <%= link_to "Retour à la recherche", rooms_path %>
+  <br>
   <div class="image-tag my-30">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -46,7 +48,7 @@
       <% end %>
     </div>
   </div>
-
-  <%= link_to "Contactez l'hôte", host_housing_requests_path, class: "mb-5 text-center btn btn-warning" %>
-
+  <br>
+  <br>
+  <%= link_to "Effectuer la demande", seeker_room_housing_requests_path(@room), method: :post %>
 </div>

@@ -18,9 +18,10 @@ Rails.application.routes.draw do
   end
 
   namespace :seeker do
+    resources :housing_requests, only: [:index]
     resources :rooms, only: [] do
-      resources :housing_requests, only: [:index, :create]
+      resources :housing_requests, only: [:create]
     end
-    resource :profile, only: [:edit, :update]
+    resource :users, only: [:edit, :update]
   end
 end
