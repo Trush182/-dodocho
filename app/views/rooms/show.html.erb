@@ -1,0 +1,38 @@
+
+<div class="container">
+  <div class="image-tag my-30">
+    <%= cl_image_tag @room.photos.first.key, height: 450, width: 550 %>
+    <%= cl_image_tag @room.photos.second.key, height: 450, width: 550 %>
+  </div>
+    <br>
+    <br>
+  <div class="description mb-20">
+    <div class="text-danger text-right">
+      <i class="fas fa-3x fa-map-marker-alt"></i>
+      <%= "1.8 Km" %>
+    </div>
+    <div>
+      <h2><%= @room.title %></h2>
+        <br>
+        <br>
+      <h5 class="text-dark"><%= @room.summary %></h5>
+    </div>
+    <div class="text-center">
+      <% if @room.has_tv %>
+        <i class="fas fa-3x fa-tv"></i>
+      <% end %>
+      <% if @room.has_internet %>
+        <i class="fas fa-3x fa-wifi"></i>
+      <% end %>
+      <% if @room.has_books %>
+        <i class="fas fa-3x fa-book"></i>
+      <% end %>
+      <% if @room.has_personal_bathroom %>
+        <i class="fas fa-3x fa-sink"></i>
+      <% end %>
+    </div>
+  </div>
+
+  <%= link_to 'Retour à la recherche', rooms_path, class: "btn btn-warning mb-5 center" %>
+
+</div>

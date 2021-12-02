@@ -1,5 +1,5 @@
-class Seekers::HousingRequestsController < ApplicationController
-  
+class Seeker::HousingRequestsController < ApplicationController
+
   def index
   end
 

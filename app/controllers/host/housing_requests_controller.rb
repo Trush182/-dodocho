@@ -1,4 +1,4 @@
-class Hosts::HousingRequestsController < ApplicationController
+class Host::HousingRequestsController < ApplicationController
   def index
     @housing_requests = Request.includes(:request).where(requests: {user: :seeker_id} )
     @pending = @housing_requests.where(status: "accepté")

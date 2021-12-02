@@ -118,14 +118,14 @@ room_josiane = Room.new(
 
   host:                       josiane,
   title:                      "Jolie chambre dans annexe",
-  summary:                    "Jolie petite chambre située dans l'annexe de ma maison, disponible en ce moment",
+  summary:                    "Jolie petite chambre située dans l'annexe de ma maison, disponible en ce moment.",
   address:                    "50, Boulevard Jean Ingres 44000 NANTES",
   housing_type:               "personal room",
   giveaway_description:       "",
   has_books:                  true,
-  has_personal_bathroom:      false,
+  has_personal_bathroom:      true,
   has_tv:                     true,
-  has_internet:               false
+  has_internet:               true
 )
 room_josiane.save!
 

@@ -1,4 +1,4 @@
-class Seekers::ProfilesController < ApplicationController
+class Seeker::ProfilesController < ApplicationController
   def edit
     @profile = @seeker.find(params[:seeker_id])
 
