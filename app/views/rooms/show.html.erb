@@ -1,38 +1,52 @@
 
 <div class="container">
   <div class="image-tag my-30">
-    <%= cl_image_tag @room.photos.first.key, height: 450, width: 550 %>
-    <%= cl_image_tag @room.photos.second.key, height: 450, width: 550 %>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%= cl_image_tag @room.photos.first.key, height: 250, width: 350, class: "d-block w-100" %>
+        </div>
+        <div class="carousel-item">
+          <%= cl_image_tag @room.photos.second.key, height: 250, width: 350, class: "d-block w-100" %>
+        </div>
+      </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </button>
+    </div>
   </div>
-    <br>
-    <br>
-  <div class="description mb-20">
+  <div class="Description mb-20">
     <div class="text-danger text-right">
-      <i class="fas fa-3x fa-map-marker-alt"></i>
+      <i class="fas fa-2x fa-map-marker-alt"></i>
       <%= "1.8 Km" %>
     </div>
-    <div>
-      <h2><%= @room.title %></h2>
+    <div class="mt-20 title-summary">
+      <h4><%= @room.title %></h4>
         <br>
         <br>
       <h5 class="text-dark"><%= @room.summary %></h5>
     </div>
-    <div class="text-center">
+    <div class="text-center mb-50">
       <% if @room.has_tv %>
-        <i class="fas fa-3x fa-tv"></i>
+        <i class="fas fa-2x fa-tv"></i>
       <% end %>
       <% if @room.has_internet %>
-        <i class="fas fa-3x fa-wifi"></i>
+        <i class="fas fa-2x fa-wifi"></i>
       <% end %>
       <% if @room.has_books %>
-        <i class="fas fa-3x fa-book"></i>
+        <i class="fas fa-2x fa-book"></i>
       <% end %>
       <% if @room.has_personal_bathroom %>
-        <i class="fas fa-3x fa-sink"></i>
+        <i class="fas fa-2x fa-sink"></i>
       <% end %>
     </div>
   </div>
 
-  <%= link_to 'Retour à la recherche', rooms_path, class: "btn btn-warning mb-5 center" %>
+  <%= link_to "Contactez l'hôte", host_housing_requests_path, class: "mb-5 text-center btn btn-warning" %>
 
 </div>
