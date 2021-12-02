@@ -1,5 +1,4 @@
-class Seekers::HousingRequestsController < ApplicationController
-  
+class Seeker::HousingRequestsController < ApplicationController
   def index
   end
 
@@ -7,5 +6,3 @@ class Seekers::HousingRequestsController < ApplicationController
     @housing_requests
   end
 end
-
-#  def new?
