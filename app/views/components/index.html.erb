@@ -111,7 +111,7 @@ Seaker Search %>
 
   <br>
 
-<a class="btn btn-gradient" href="#">SUIVANT</a>
+<a class="btn btn-gradient" href="#">Login</a>
 </div>
 
 <%# -------------------------------------------------------------------------------------- %>
@@ -145,7 +145,13 @@ Seaker Search %>
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: <%= image_path('home-page-dodo.jpg') %>
  }
+
+ .form-control, placeholder {
+   text-align: center;
+ }
+
 
 </style>
 
@@ -180,10 +186,61 @@ Seaker Search %>
     </div>
 
   <br>
+<div class="container">
+</div>
+  <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Je propose une chambre">
+</div>
+</div>
 
-    <a class="btn btn-gradient" href="#">VALIDER</a>
+<br>
 
 
+<%# ------------------------------------------------------------------------------------- %>
+<style>
+.card-service-icon-wrapper---blue{
+    background-color: #B3E7F3;
+  }
 
-    <div class="card-home-page-wrapper"><%= image_tag('image/home-page-dodo.jpg', width: 100) %>
-    </div>
+  .card-service-icon-wrapper---brown{
+    background-color: #F0DFD2;
+  }
+
+  .card-service-icon-wrapper---purple{
+    background-color: #BDB7D6;
+  }
+
+  .card-service-icon-wrapper---green{
+    background-color: rgba(111, 207, 151, 0.31);;
+  }
+</style>
+
+
+<div class="container">
+
+ <div class="card-service shadow-sm">
+    <div class="card-service-icon-wrapper card-service-icon-wrapper---blue"><%= image_tag('service-icons/icon-douche.svg', width: 48) %></div>
+    <div class="card-service-description-wrapper">Douche</div>
+  </div>
+
+  <br>
+
+  <div class="card-service shadow-sm">
+    <div class="card-service-icon-wrapper card-service-icon-wrapper---brown"><%= image_tag('service-icons/icon-tv.svg', width: 48) %></div>
+    <div class="card-service-description-wrapper">TV</div>
+  </div>
+
+  <br>
+
+  <div class="card-service shadow-sm">
+    <div class="card-service-icon-wrapper card-service-icon-wrapper---purple"><%= image_tag('service-icons/icon-wifi.svg', width: 48) %></div>
+    <div class="card-service-description-wrapper">Wifi</div>
+  </div>
+
+  <br>
+
+  <div class="card-service shadow-sm">
+    <div class="card-service-icon-wrapper card-service-icon-wrapper---green"><%= image_tag('service-icons/icon-livres.svg', width: 48) %></div>
+    <div class="card-service-description-wrapper">Livres</div>
+  </div>
+
+</div>
