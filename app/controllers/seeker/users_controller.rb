@@ -1,12 +1,17 @@
 class Seeker::UsersController < ApplicationController
   def edit
     @user = current_user
-
   end
 
   def update
-    @profile.update(summary: params[:user][:summary], address: params[:room][:address], housing_types: params[:room][:housing_types])
+    @user = current_user
+    @user.update(user_params)
+    redirect_to rooms_path
+  end
 
-    redirect_to room_path
+  private
+
+  def user_params
+    params.require(:user).permit(:services => [])
   end
 end

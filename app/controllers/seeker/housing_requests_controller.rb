@@ -3,7 +3,6 @@ class Seeker::HousingRequestsController < ApplicationController
     @user = current_user
     @requests = @user.requests
   end
-
   # def create
   # end
 
@@ -12,4 +11,5 @@ class Seeker::HousingRequestsController < ApplicationController
   # def rooms_params
   #   params.require(:room).permit(:id)
   # end
+
 end
