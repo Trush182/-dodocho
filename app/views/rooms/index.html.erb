@@ -6,7 +6,7 @@
     <% @rooms.each do |room| %>
       <%= link_to room_path(room), class:"link-no-decoration" do %>
         <div class="card-product my-30">
-          <%= cl_image_tag room.first.photos.key %>
+          <%# <%= cl_image_tag room.first.photos.key %> %>
           <div class="card-product-infos">
             <h3><%= room.title %></h3>
             <% if room.has_tv %>
@@ -26,5 +26,6 @@
         </div>
       <% end %>
     <% end %>
+    <%= link_to 'Retour Page Principale', root_path,  %>
   </div>
 </div>
