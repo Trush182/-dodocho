@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+  resources :components
+
   resources :rooms, only: [:index, :show]
 
   namespace :host do

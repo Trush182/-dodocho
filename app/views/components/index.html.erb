@@ -1,2 +1,52 @@
-<h1>Components#index</h1>
-<p>Find me in app/views/components/index.html.erb</p>
+<style>
+  .card-service {
+    background-color: gray;
+    display: flex;
+    border-radius: 0.3em;
+  }
+  .card-service-icon-wrapper {
+    padding: 1em;
+    border-radius: 0.3em 0 0 0.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-service-icon-wrapper--green {
+    background-color: #6FCF97;
+    /* filter: brightness(31%); */
+  }
+  .card-service-description-wrapper {
+    padding: 2em 0 2em 1.5em;
+    border-radius: 0 0.3em 0.3em 0;
+    background: white;
+    width: 100%;
+    font-family: DM Sans;
+  }
+</style>
+<div class="container">
+  <h1>Components</h1>
+  <div class="card-service shadow-sm">
+    <div class="card-service-icon-wrapper card-service-icon-wrapper--green"></div>
+    <div class="card-service-description-wrapper">Jardinage</div>
+  </div>
+  <br>
+  <div class="card-service shadow-sm">
+    <div class="card-service-icon-wrapper card-service-icon-wrapper--blue"></div>
+    <div class="card-service-description-wrapper">Courses</div>
+  </div>
+  <br>
+  <div class="card-service shadow-sm">
+    <div class="card-service-icon-wrapper card-service-icon-wrapper--blue"></div>
+    <div class="card-service-description-wrapper">Shopping</div>
+  </div>
+  <br>
+  <div class="card-service shadow-sm">
+    <div class="card-service-icon-wrapper card-service-icon-wrapper--blue"></div>
+    <div class="card-service-description-wrapper">Bricolage</div>
+  </div>
+  <br>
+  <div class="card-service shadow-sm">
+    <div class="card-service-icon-wrapper card-service-icon-wrapper--blue"></div>
+    <div class="card-service-description-wrapper">Cuisine</div>
+  </div>
+</div>
