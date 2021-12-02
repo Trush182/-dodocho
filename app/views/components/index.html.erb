@@ -1,6 +1,16 @@
 <style>
+
+</style>
+
+
+<%# ----------------------------------------------------------------
+Seaker Search %>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+</style>
+<style>
   .card-service {
-    background-color: gray;
+    background-color: white;
     display: flex;
     border-radius: 0.3em;
   }
@@ -12,41 +22,260 @@
     align-items: center;
   }
   .card-service-icon-wrapper--green {
-    background-color: #6FCF97;
-    /* filter: brightness(31%); */
+    background-color: rgba(111, 207, 151, 0.31);
+  }
+  .card-service-icon-wrapper--blue{
+    background-color: #B3E7F3;
+  }
+  .card-service-icon-wrapper--brown{
+    background-color: #F0DFD2;
+  }
+  .card-service-icon-wrapper--purple{
+    background-color: #BDB7D6;
+  }
+  .card-service-icon-wrapper--pink{
+    background-color: #F0D2DD;
   }
   .card-service-description-wrapper {
     padding: 2em 0 2em 1.5em;
     border-radius: 0 0.3em 0.3em 0;
     background: white;
     width: 100%;
+    font-family: "DM Sans";
+    font-weight: bold;
+  }
+  .btn-gradient {
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: #FE5E41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .h1{
     font-family: DM Sans;
+    font-size: 8px;
   }
 </style>
 <div class="container">
-  <h1>Components</h1>
+  <br>
+  <div>
+  <h1>Je propose</h1>
+  </div>
   <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper--green"></div>
+    <div class="card-service-icon-wrapper card-service-icon-wrapper--green"><%= image_tag('https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg', width: 48) %></div>
     <div class="card-service-description-wrapper">Jardinage</div>
   </div>
   <br>
   <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper--blue"></div>
+    <div class="card-service-icon-wrapper card-service-icon-wrapper--blue"><%= image_tag('https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg', width: 48) %></div>
     <div class="card-service-description-wrapper">Courses</div>
   </div>
   <br>
   <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper--blue"></div>
-    <div class="card-service-description-wrapper">Shopping</div>
+    <div class="card-service-icon-wrapper card-service-icon-wrapper--brown"><%= image_tag('https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg', width: 48) %></div>
+    <div class="card-service-description-wrapper">Promenade</div>
   </div>
   <br>
   <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper--blue"></div>
+    <div class="card-service-icon-wrapper card-service-icon-wrapper--purple"><%= image_tag('https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg', width: 48) %></div>
     <div class="card-service-description-wrapper">Bricolage</div>
   </div>
   <br>
   <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper--blue"></div>
+    <div class="card-service-icon-wrapper card-service-icon-wrapper--pink"><%= image_tag('https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg', width: 48) %></div>
     <div class="card-service-description-wrapper">Cuisine</div>
   </div>
+  <br>
+<a class="btn btn-gradient" href="#">SUIVANT</a>
 </div>
+<%# -------------------------------------------------------------------------------------- %>
+<br>
+<style>
+.card-moon-night {
+  background-color: rgba(41, 79, 212, 0.6);
+  display: flex;
+  align-items: center;
+  border-radius: 0.3em;
+  padding: 1em;
+  font-family: "DM Sans";
+  font-weight: bold;
+}
+.card-moon-night-icon-wrapper {
+    border-radius: 0.3em 0 0 0.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 9em;
+  }
+  .card-moon-night-description-wrapper {
+    margin-bottom: 0;
+  }
+  /* .card-home-page-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ } */
+</style>
+<div class="container">
+  <label class="sr-only" for="inlineFormInputGroupUsername2">Map</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text"><%= image_tag('https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpghttps://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg') %></div>
+      </div>
+      <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Entrez votre adresse">
+    </div>
+
+
+  <div class="card-room  shadow-sm" style="width: 22rem; height:15rem;" >
+     <div class="card text-white">
+
+          <img src="https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg" class="card-img-top" style="height: 13rem;
+    object-fit: cover"  alt="...">
+
+        <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+        </div>
+     </div>
+
+
+    <div class="d-flex flex-row bd-highlight mb-3">
+    <div class="p-1 bd-highlight">Ic</div>
+    <div class="p-1 bd-highlight">Ic</div>
+    <div class="p-1 bd-highlight">Ic</div>
+    </div>
+
+<br>
+
+
+
+
+<style>
+  .card-index {
+
+    background-color: white;
+    /* display: flex; */
+    border-radius: 0.3em;
+
+
+
+  }
+  .card-index-image-wrapper {
+
+    padding: 0em;
+    border-radius: 0.4em 0.4em 0.3em 0.4em;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+  }
+  /* .card-index-image-wrapper--background {
+
+    background-color: rgba(111, 207, 151, 0.31);
+  } */
+
+  }
+  .card-index-description-wrapper {
+
+
+
+    padding: 0em;
+    border-radius: 0.4em 0.4em 0.3em 0.4em;
+    background: white;
+    width: 100%;
+    font-family: "DM Sans";
+    font-weight: bold;
+        border-radius: 4px;
+
+  }
+/*
+  .btn-gradient {
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: #FE5E41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .h1{
+    font-family: DM Sans;
+    font-size: 8px;
+  }
+  </style>
+
+
+
+<div class="card-index shadow-sm">
+  <div class="card-index-image-wrapper card-index-image-wrapper--background" style="object-fit: cover">
+  <img src="https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg" class="card-img-top" style="height: 10rem;
+    object-fit: cover"  alt="...">
+   </div>
+      <div class="card-index-description-wrapper">
+        <div class="d-flex flex-row">
+        <div class="p-1 ">Ic</div>
+        <div class="p-1">Ic</div>
+        <div class="p-1 ">Ic</div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+<%#
+
+<div class="container">
+<div id="demo" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://www.pierre-giraud.com/bootstrap-carrousel-slide-1.jpg" alt="Carrousel slide 1" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.pierre-giraud.com/bootstrap-carrousel-slide-2.jpg" alt="Carrousel slide 2" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.pierre-giraud.com/bootstrap-carrousel-slide-3.jpg" alt="Carrousel slide 3" class="d-block w-100">
+          </div>
+        </div>
+      </div>
+</div> %>
+
+
+<div class="card-index-image-wrapper">
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="card-img-top" src="https://a0.muscache.com/pictures/d0e2118b-df47-461a-a1af-9c86d030d5f5.jpg" alt="">
+    </div>
+    <div class="carousel-item">
+      <img class="card-img-top" src="https://ihouse.berkeley.edu/sites/default/files/styles/openberkeley_brand_widgets_rectangle/public/residentroomsingle.jpg?itok=HPajBC9c" alt="">
+    </div>
+    <div class="carousel-item">
+      <img class="card-img-top" src="https://q-xx.bstatic.com/images/hotel/max1024x768/168/168844007.jpg" alt=" ">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+</div>
+  <br>
