@@ -1,4 +1,4 @@
-class Seeker::UsersController < ApplicationController
+class Seeker::OfferedServicesController < ApplicationController
   def edit
     @user = current_user
   end

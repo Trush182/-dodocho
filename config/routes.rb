@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :rooms, only: [] do
       resources :housing_requests, only: [:index, :create]
     end
-    resources :users, only: [:edit, :update]
+
+    resource :offered_services, only: [:edit, :update]
   end
 end
