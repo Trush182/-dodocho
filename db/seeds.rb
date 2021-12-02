@@ -11,6 +11,7 @@ puts "HousingRequest Destroyed"
 Room.destroy_all
 puts "Room Destroyed"
 User.destroy_all
+
 puts "User Destroyed"
 
 # SEEKERS **************************************************************
@@ -117,14 +118,14 @@ room_josiane = Room.new(
 
   host:                       josiane,
   title:                      "Jolie chambre dans annexe",
-  summary:                    "Jolie petite chambre située dans l'annexe de ma maison, disponible en ce moment",
-  address:                    "280, Boulevard de la Liberté 44000 NANTES",
+  summary:                    "Jolie petite chambre située dans l'annexe de ma maison, disponible en ce moment.",
+  address:                    "50, Boulevard Jean Ingres 44000 NANTES",
   housing_type:               "personal room",
   giveaway_description:       "",
   has_books:                  true,
-  has_personal_bathroom:      false,
+  has_personal_bathroom:      true,
   has_tv:                     true,
-  has_internet:               false
+  has_internet:               true
 )
 room_josiane.save!
 
@@ -138,7 +139,7 @@ room_luis = Room.new(
   host:                       luis,
   title:                      "Chambre partagée dans mon studio",
   summary:                    "Si quelqu'un dans le besoin, propose un lit d'appoint dans mon studio",
-  address:                    "6, rue du Pont aux choux 44000 NANTES",
+  address:                    "6, rue de Belleville 44000 NANTES",
   housing_type:               "shared room",
   giveaway_description:       "",
   has_books:                  false,
@@ -158,7 +159,7 @@ room_hubert = Room.new(
   host:                       hubert,
   title:                      "Chambre d'ami à disposition",
   summary:                    "Je propose ma chambre d'ami innocupée en ce moment",
-  address:                    "280, rue des Guépins 44000 NANTES ",
+  address:                    "15, rue Robert Douineau 44300 SAINT SEBASTIEN SUR LOIRE ",
   housing_type:               "personal room",
   giveaway_description:       "",
   has_books:                  true,
