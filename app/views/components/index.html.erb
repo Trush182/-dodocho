@@ -1,0 +1,315 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+</style>
+
+<br>
+
+<div class="container">
+
+  <label class="sr-only" for="inlineFormInputGroupUsername2">Map</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text"><%= image_tag('https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpghttps://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg') %></div>
+      </div>
+      <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Entrez votre adresse">
+    </div>
+
+<%#
+  <div class="card-room  shadow-sm" style="width: 22rem; height:15rem;" >
+     <div class="card text-white">
+      <img src="https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg" class="card-img-top" style="height: 13rem;object-fit: cover"  alt="...">
+          <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+        </div>
+     </div>
+        <div class="d-flex flex-row bd-highlight mb-3">
+        <div class="p-1 bd-highlight">Ic</div>
+        <div class="p-1 bd-highlight">Ic</div>
+        <div class="p-1 bd-highlight">Ic</div>
+    </div>
+
+<br> %>
+
+
+
+
+<style>
+.card-index {
+    background-color: white;
+    border-radius: 0.3em;
+}
+.card-index-image-wrapper {
+    padding: 0em;
+    border-radius: 0.4em 0.4em 0.3em 0.4em;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-index-description-wrapper {
+    padding: 0em;
+    border-radius: 0.4em 0.4em 0.3em 0.4em;
+    background: white;
+    width: 100%;
+    font-family: "DM Sans";
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.h1{
+    font-family: DM Sans;
+    font-size: 8px;
+}
+
+.button-back {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  font-size: 2em;
+  border-radius: 50%;
+  background-color: #FE5E41;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+  }
+
+
+.button-back:hover {
+  background-color: #FF3814;
+}
+
+.button-back:active{
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+}
+
+.button-menu {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  font-size: 2em;
+  border-radius: 50%;
+  background-color: #FE5E41;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+  }
+
+.button-menu:hover {
+  background-color: #FF3814;
+}
+
+.button-menu:active{
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+}
+
+
+
+.card-footer-description-wrapper {
+    padding: 0em;
+    border-radius: 0.4em 0.4em 0.3em 0.4em;
+    background: white;
+    width: 100%;
+    font-family: "DM Sans";
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.button-checked {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  font-size: 2em;
+  border-radius: 50%;
+  background-color: #6FCF97;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+  }
+
+
+.button-checked:hover {
+  background-color: #6FCF97;
+}
+
+.button-checked:active{
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+}
+
+.button-points {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  font-size: 2em;
+  border-radius: 50%;
+  background-color: #FFB84E;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+  }
+
+
+.button-points:hover {
+  background-color: #FFB84E;
+}
+
+.button-points:active{
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+}
+
+.button-refuse {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  font-size: 2em;
+  border-radius: 50%;
+  background-color: #FE5E41;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+  }
+
+
+.button-refuse:hover {
+  background-color: #FF3814;
+}
+
+.button-refuse:active{
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+}
+
+</style>
+
+
+
+<div class="card-index shadow-sm">
+
+
+  <div class="card-index-image-wrapper" style="object-fit: cover">
+  <img src="https://i.pinimg.com/564x/fd/3c/28/fd3c28b2fe7e844018285cd03bcb5c90.jpg" class="card-img-top" style="height: 10rem;
+    object-fit: cover"  alt="...">
+   </div>
+
+      <div class="card-footer-description-wrapper">
+        <div class="d-flex flex-row">
+        <div class="p-1">Ic</div>
+        <div class="p-1">Ic</div>
+        <div class="p-1">Ic</div>
+      </div>
+    </div>
+  </div>
+
+<br>
+
+
+<div class="card-index-image-wrapper">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+</ul>
+
+
+
+
+  <div class="carousel-inner ">
+    <div class="carousel-item active">
+      <img class="card-img-top" src="https://a0.muscache.com/pictures/d0e2118b-df47-461a-a1af-9c86d030d5f5.jpg" alt="">
+    </div>
+    <div class="carousel-item">
+      <img class="card-img-top" src="https://ihouse.berkeley.edu/sites/default/files/styles/openberkeley_brand_widgets_rectangle/public/residentroomsingle.jpg?itok=HPajBC9c" alt="">
+    </div>
+    <div class="carousel-item">
+      <img class="card-img-top" src="https://q-xx.bstatic.com/images/hotel/max1024x768/168/168844007.jpg" alt="">
+    </div>
+  </div>
+
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+  </div>
+</div>
+
+
+
+
+<br>
+  <div class="button-back"><i class="fas fa-chevron-left"></i></div>
+<br>
+  <div class="button-menu button-menu-size"><i class="fas fa-bars"></i></div>
+<br>
+
+
+  <div class="button-checked"><i class="fas fa-check"></i></div>
+<br>
+  <div class="button-points"><i class="fas fa-ellipsis-h"></i></div>
+<br>
+  <div class="button-refuse"><i class="fas fa-times"></i></div>
+<br>
+
+
+
+
+
+
+
+<div class="card-body" style="max-width: 18rem; background-color: #CF976F;">
+
+  <div class="card-body  text-secondary">
+    <h5 class="card-title ">Chambre de ville</h5>
+    <p class="card-text">Welcome, un imprévu, une galère, ..............</p>
+  </div>
+
+  <div style="border-radius: 1em;">
+        <div class="card-footer-description-wrapper">
+        <div class="d-flex flex-row">
+        <div class="p-1 "><i class="fas fa-check"></i></div>
+        <div class="p-1"><i class="fas fa-check"></i></div>
+        <div class="p-1 "><i class="fas fa-check"></i></div>
+      </div>
+
+  </div>
+</div>
+<br>
+
+<%#
+  <div class="bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg'); height: 100vh;"> </div> %>
