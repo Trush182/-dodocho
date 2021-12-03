@@ -1,7 +1,10 @@
-<h1 class="text-center">DODOCHO</h1>
-<br>
-<br>
-<br>
-<br>
-<p class="text-center"><%= link_to 'JE CHERCHE UNE CHAMBRE', edit_seeker_offered_services_path %></p>
-<p class="text-center"><%= link_to 'Je propose une chambre', new_host_room_path %></p>
+<div class="container h-100">
+  <div class="d-flex flex-column justify-content-around h-100">
+    <h1 class="text-center">DODOCHO</h1>
+
+    <div>
+      <p class="text-center"><%= link_to 'JE CHERCHE UNE CHAMBRE', edit_seeker_offered_services_path, class: "btn btn-gradient" %></p>
+      <p class="text-center"><%= link_to 'Je propose une chambre', new_host_room_path %></p>
+    </div>
+  </div>
+</div>
