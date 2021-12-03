@@ -1,246 +1,43 @@
 
-<%# ----------------------------------------------------------------
-Seaker Search %>
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 </style>
 
+
+
+<%# --------------------------------------------------------------------------------------- %>
+
 <style>
-  .card-service {
-    background-color: white;
-    display: flex;
-    border-radius: 0.3em;
-  }
+ .form-control, placeholder {
+   text-align: center;
+ }
+</style>
 
-  .card-service-icon-wrapper {
-    padding: 1em;
-    border-radius: 0.3em 0 0 0.3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+<%# ------------ %>
 
-  .card-service-icon-wrapper--green {
-    background-color: rgba(111, 207, 151, 0.31);
-  }
-
-  .card-service-icon-wrapper--blue{
-    background-color: #B3E7F3;
-  }
-
-  .card-service-icon-wrapper--brown{
-    background-color: #F0DFD2;
-  }
-
-  .card-service-icon-wrapper--purple{
-    background-color: #BDB7D6;
-  }
-
-  .card-service-icon-wrapper--pink{
-    background-color: #F0D2DD;
-  }
+</div>
+  <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Je propose une chambre">
+</div>
+</div>
 
 
-  .card-service-description-wrapper {
-    padding: 2em 0 2em 1.5em;
-    border-radius: 0 0.3em 0.3em 0;
-    background: white;
-    width: 100%;
-    font-family: "DM Sans";
-    font-weight: bold;
-  }
+<%# ------------------------------------------------------------------------------------- %>
 
-  .btn-gradient {
-    color: white;
-    padding: 8px 24px;
-    border-radius: 4px;
-    font-weight: bold;
-    background: #FE5E41;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
+<style>
   .h1{
     font-family: DM Sans;
     font-size: 8px;
   }
 </style>
 
+<%# ------------------------------ %>
 
-<div class="container">
-
-  <br>
-
-  <div>
-  <h1>Je propose</h1>
-  </div>
-
-  <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper--green"><%= image_tag('service-icons/gardening.svg', width: 48) %></div>
-    <div class="card-service-description-wrapper">Jardinage</div>
-  </div>
-
-  <br>
-
-  <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper--blue"><%= image_tag('service-icons/shopping.svg', width: 48) %></div>
-    <div class="card-service-description-wrapper">Courses</div>
-  </div>
-
-  <br>
-
-  <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper--brown"><%= image_tag('service-icons/pet-walking.svg', width: 48) %></div>
-    <div class="card-service-description-wrapper">Promenade</div>
-  </div>
-
-  <br>
-
-  <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper--purple"><%= image_tag('service-icons/crafting.svg', width: 48) %></div>
-    <div class="card-service-description-wrapper">Bricolage</div>
-  </div>
-
-  <br>
-
-  <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper--pink"><%= image_tag('service-icons/cooking.svg', width: 48) %></div>
-    <div class="card-service-description-wrapper">Cuisine</div>
-  </div>
-
-  <br>
-
-<a class="btn btn-gradient" href="#">Login</a>
+<div>
+<h1>Equipements</h1>
 </div>
 
-<%# -------------------------------------------------------------------------------------- %>
-<br>
-
-<style>
-
-.card-moon-night {
-  background-color: rgba(41, 79, 212, 0.6);
-  display: flex;
-  align-items: center;
-  border-radius: 0.3em;
-  padding: 1em;
-  font-family: "DM Sans";
-  font-weight: bold;
-}
-
-.card-moon-night-icon-wrapper {
-    border-radius: 0.3em 0 0 0.3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 9em;
-  }
-
-  .card-moon-night-description-wrapper {
-    margin-bottom: 0;
-  }
-
-  .card-home-page-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: <%= image_path('home-page-dodo.jpg') %>
- }
-
- .form-control, placeholder {
-   text-align: center;
- }
-
-
-</style>
-
-<div class="container">
-
-  <label class="sr-only" for="inlineFormInputGroupUsername2">Map</label>
-    <div class="input-group mb-2 mr-sm-2">
-      <div class="input-group-prepend">
-        <div class="input-group-text"><%= image_tag('map-symbol.svg') %></div>
-      </div>
-      <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Entrez votre adresse">
-    </div>
-
-
-    <div class="card-moon-night">
-      <div class="card-moon-night-icon-wrapper"><%= image_tag('moon-stars.svg', width: 48) %></div>
-      <p class="card-moon-night-description-wrapper">Une nuitée</p>
-    </div>
-
-    <br>
-
-    <div class="card-moon-night">
-      <div class="card-moon-night-icon-wrapper"><%= image_tag('moon-stars.svg', width: 48) %></div>
-      <p class="card-moon-night-description-wrapper">Deux nuitées</p>
-    </div>
-
-    <br>
-
-    <div class="card-moon-night">
-      <div class="card-moon-night-icon-wrapper"><%= image_tag('moon-stars.svg', width: 48) %></div>
-      <p class="card-moon-night-description-wrapper">Trois nuitées</p>
-    </div>
-
-  <br>
-<div class="container">
-</div>
-  <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Je propose une chambre">
-</div>
-</div>
-
-<br>
-
-
-<%# ------------------------------------------------------------------------------------- %>
-<style>
-.card-service-icon-wrapper---blue{
-    background-color: #B3E7F3;
-  }
-
-  .card-service-icon-wrapper---brown{
-    background-color: #F0DFD2;
-  }
-
-  .card-service-icon-wrapper---purple{
-    background-color: #BDB7D6;
-  }
-
-  .card-service-icon-wrapper---green{
-    background-color: rgba(111, 207, 151, 0.31);;
-  }
-</style>
-
-
-<div class="container">
-
- <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper---blue"><%= image_tag('service-icons/icon-douche.svg', width: 48) %></div>
-    <div class="card-service-description-wrapper">Douche</div>
-  </div>
-
-  <br>
-
-  <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper---brown"><%= image_tag('service-icons/icon-tv.svg', width: 48) %></div>
-    <div class="card-service-description-wrapper">TV</div>
-  </div>
-
-  <br>
-
-  <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper---purple"><%= image_tag('service-icons/icon-wifi.svg', width: 48) %></div>
-    <div class="card-service-description-wrapper">Wifi</div>
-  </div>
-
-  <br>
-
-  <div class="card-service shadow-sm">
-    <div class="card-service-icon-wrapper card-service-icon-wrapper---green"><%= image_tag('service-icons/icon-livres.svg', width: 48) %></div>
-    <div class="card-service-description-wrapper">Livres</div>
-  </div>
-
+<div>
+<h1>Je propose</h1>
 </div>
