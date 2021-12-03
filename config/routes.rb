@@ -26,5 +26,6 @@ Rails.application.routes.draw do
     end
 
     resource :offered_services, only: [:edit, :update]
+    resource :search_infos, only: [:edit, :update]
   end
 end

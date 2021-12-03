@@ -6,7 +6,7 @@ class Seeker::OfferedServicesController < ApplicationController
   def update
     @user = current_user
     @user.update(user_params)
-    redirect_to rooms_path
+    redirect_to edit_seeker_search_infos_path
   end
 
   private
