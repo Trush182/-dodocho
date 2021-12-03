@@ -1,0 +1,33 @@
+<h1 class="text-center">Mes Résultats</h1>
+
+<%= session[:nights_count_chosen] %>
+
+<div class="container my-5">
+  <div class="cards border-solid-black">
+    <% @rooms.each do |room| %>
+      <%= link_to room_path(room), class:"link-no-decoration" do %>
+        <div class="card-product my-30">
+          <%= cl_image_tag room.photos.first.key, width: 300, height: 250 %>
+          <div class="card-product-infos">
+            <h4><%= room.title %></h4>
+            <h4><%= room.address %></h4>
+              <% if room.has_tv %>
+                <i class="fas fa-1x fa-tv"></i>
+              <% end %>
+              <% if room.has_internet %>
+                <i class="fas fa-1x fa-wifi"></i>
+              <% end %>
+              <% if room.has_books %>
+                <i class="fas fa-1x fa-book"></i>
+              <% end %>
+              <% if room.has_personal_bathroom %>
+                <i class="fas fa-1x fa-sink"></i>
+              <% end %>
+              <p> <%= room.summary %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <%= link_to 'BACK', root_path %>
+  </div>
+</div>

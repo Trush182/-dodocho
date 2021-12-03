@@ -1,0 +1,21 @@
+<h1>Search parameters</h1>
+
+<%= form_tag seeker_search_infos_path, method: :patch do %>
+  <label for="">Adresse</label>
+  <%= text_field_tag "search_infos[address]",
+    params.dig(:search_infos, :address),
+    class: "form-control"
+  %>
+
+  <h5>Mon besoin</h5>
+
+  <% 1.upto(HousingRequest::MAX_NIGHTS_COUNT) do |nights_count| %>
+    <%= radio_button_tag 'search_infos[nights_count]', nights_count, false, class: "xxx" %>
+    <%= label_tag "search_infos_nights_count_#{nights_count}", "#{nights_count} nuitée(s)" %>
+  <% end %>
+
+  <%= submit_tag "Valider", data: { confirm: "Êtes-vous sûr?" }
+%>
+
+
+<% end  %>
