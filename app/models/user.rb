@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  SEEKER_SERVICES = ["Jardinage", "Courses", "Bricolage", "Cuisine", "Animaux"]
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

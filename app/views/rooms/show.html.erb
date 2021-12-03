@@ -1,4 +1,3 @@
-
 <div class="container">
   <%= link_to "Retour à la recherche", rooms_path %>
   <br>
@@ -48,7 +47,7 @@
       <% end %>
     </div>
   </div>
-  <br>
-  <br>
-  <%= link_to "Effectuer la demande", seeker_room_housing_requests_path(@room), method: :post %>
+    <br>
+    <br>
+    <%= link_to "Effectuer la demande", seeker_room_housing_requests_path(@room), method: :post, class: "btn btn-gradient btn-block btn-lg" %>
 </div>

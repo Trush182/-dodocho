@@ -1,0 +1,45 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+  .card-service {
+    background-color: white;
+    display: flex;
+    border-radius: 0.3em;
+  }
+
+  .card-service-icon-wrapper {
+    padding: 1em;
+    border-radius: 0.3em 0 0 0.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-service-icon-wrapper--gardening {
+    background-color: rgba(111, 207, 151, 0.31);
+  }
+
+  .card-service-icon-wrapper--shopping{
+    background-color: #B3E7F3;
+  }
+
+  .card-service-icon-wrapper--pet-walking{
+    background-color: #F0DFD2;
+  }
+
+  .card-service-icon-wrapper--crafting{
+    background-color: #BDB7D6;
+  }
+
+  .card-service-icon-wrapper--cooking{
+    background-color: #F0D2DD;
+  }
+
+  .card-service-description-wrapper {
+    padding: 2em 0 2em 1.5em;
+    border-radius: 0 0.3em 0.3em 0;
+    background: white;
+    width: 100%;
+    font-family: "DM Sans";
+    font-weight: bold;
+  }
