@@ -5,17 +5,11 @@ class Seeker::HousingRequestsController < ApplicationController
   end
 
   def create
-    @request = HousingRequest.new(request_params)
+    @request = HousingRequest.new
     @room = Room.find(params[:room_id])
     @request.room = @room
     @request.save!
 
     redirect_to seeker_housing_requests_path
-  end
-
-  private
-
-  def request_params
-    params.require(:request).permit(:room_id, :seeker_id)
   end
 end
