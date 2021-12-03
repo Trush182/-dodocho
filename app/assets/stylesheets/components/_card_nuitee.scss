@@ -1,0 +1,21 @@
+.card-moon-night {
+  background-color: rgba(41, 79, 212, 0.6);
+  display: flex;
+  align-items: center;
+  border-radius: 0.3em;
+  padding: 1em;
+  font-family: "DM Sans";
+  font-weight: bold;
+}
+
+.card-moon-night-icon-wrapper {
+  border-radius: 0.3em 0 0 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 9em;
+}
+
+.card-moon-night-description-wrapper {
+  margin-bottom: 0;
+}

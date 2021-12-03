@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :components, only: [:index]
+
   devise_for :users
 
   root to: 'pages#home'
