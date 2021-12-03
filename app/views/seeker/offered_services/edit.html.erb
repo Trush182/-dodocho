@@ -1,7 +1,7 @@
 <p class="text-right">"Bouton"</p>
 <p>Je propose</p>
 
-<%= simple_form_for @user, url: seeker_user_path do |f| %>
+<%= simple_form_for @user, url: seeker_offered_services_path do |f| %>
   <%= f.input :services, as: :check_boxes, collection: ["Jardinage", "Courses", "Bricolage", "Cuisine", "Animaux", "Autres"], include_hidden: false %>
 <br>
   <%= f.submit "Suivant" %>
@@ -9,5 +9,3 @@
 
 
 <%# Voir demain pour le start_date / end_date %>
-
-

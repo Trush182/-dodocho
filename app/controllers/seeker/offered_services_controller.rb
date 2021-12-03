@@ -1,4 +1,4 @@
-class Seeker::UsersController < ApplicationController
+class Seeker::OfferedServicesController < ApplicationController
   def edit
     @user = current_user
   end
@@ -12,6 +12,6 @@ class Seeker::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:services => [])
+    params.require(:user).permit(:id, :services => [])
   end
 end
