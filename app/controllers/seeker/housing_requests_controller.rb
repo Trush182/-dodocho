@@ -5,7 +5,7 @@ class Seeker::HousingRequestsController < ApplicationController
   end
 
   def create
-    current_time = Time.now.change(hour: 23, min: 21)
+    current_time = Time.now
     nights_count_requested = session[:nights_count_chosen]
 
     limit_time = Time.now.change(hour: HousingRequest::HOUR_BEFORE_POSTPONING_REQUESTS_TO_NEXT_DAY, min: 0)
