@@ -16,6 +16,6 @@ class Seeker::HousingRequestsController < ApplicationController
   private
 
   def request_params
-    params.require(:room).permit(:id)
+    params.require(:request).permit(:room_id, :seeker_id)
   end
 end
