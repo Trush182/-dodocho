@@ -34,4 +34,7 @@ class Seeker::HousingRequestsController < ApplicationController
       render 'rooms/show'
     end
   end
+
+  def show
+  end
 end

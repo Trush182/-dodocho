@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   end
 
   namespace :seeker do
-    resources :housing_requests, only: [:index]
+    resources :housing_requests, only: [:index, :show]
     resources :rooms, only: [] do
       resources :housing_requests, only: [:create]
     end
