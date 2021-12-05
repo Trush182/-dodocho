@@ -1,11 +1,23 @@
-<p class="text-right">"Bouton"</p>
-<p>Je propose</p>
+<div class="container mt-5">
+  <h4>Les services que je peux rendre</h4>
 
-<%= simple_form_for @user, url: seeker_offered_services_path do |f| %>
-  <%= f.input :services, as: :check_boxes, collection: ["Jardinage", "Courses", "Bricolage", "Cuisine", "Animaux", "Autres"], include_hidden: false %>
-<br>
-  <%= f.submit "Suivant" %>
-<% end %>
+  <%= simple_form_for @user, url: seeker_offered_services_path do |f| %>
+    <%#= f.input :services, as: :check_boxes, collection: ["Jardinage", "Courses", "Bricolage", "Cuisine", "Animaux"], include_hidden: false %>
+
+    <div class="row">
+      <% User::SEEKER_SERVICES.each do |service| %>
+        <div class="form-check col-12">
+          <input class="form-check-input is-valid check_boxes optional d-none" type="checkbox" value="<%= service %>" name="user[services][]" id="user_services_<%= service.downcase %>">
+          <label for="user_services_<%= service.downcase %>" class="card-service shadow-sm">
+              <div class="card-service-icon-wrapper card-service-icon-wrapper--<%= service_name_to_skill(service) %>"><%= image_tag("service-icons/#{service_name_to_skill(service)}.svg", width: 48) %></div>
+              <div class="card-service-description-wrapper"><%= service %></div>
+          </label>
+        </div>
+      <% end %>
+    </div>
+
+    <%= f.submit "Suivant", class: "btn btn-gradient btn-block btn-lg mt-3" %>
+  <% end %>
 
 
-<%# Voir demain pour le start_date / end_date %>
+</div>

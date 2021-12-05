@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  resources :components, only: [:index]
+
   devise_for :users
 
   root to: 'pages#home'
+
+  resources :components
 
   resources :rooms, only: [:index, :show]
 
@@ -24,5 +28,6 @@ Rails.application.routes.draw do
     end
 
     resource :offered_services, only: [:edit, :update]
+    resource :search_infos, only: [:edit, :update]
   end
 end
