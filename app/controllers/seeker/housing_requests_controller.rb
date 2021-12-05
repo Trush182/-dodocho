@@ -35,6 +35,5 @@ class Seeker::HousingRequestsController < ApplicationController
   end
 
   def show
-
   end
 end
