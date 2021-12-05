@@ -1,7 +1,6 @@
 class Seeker::HousingRequestsController < ApplicationController
   def index
-    @user = current_user
-    @requests = @user.requests
+    @requests = current_user.requests
   end
 
   def create

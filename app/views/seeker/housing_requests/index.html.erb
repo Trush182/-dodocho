@@ -1,4 +1,5 @@
-
-
-
-
+<%  @requests.each do |request| %>
+  <%= link_to seeker_housing_request_path(request), class:"text-decoration-none text-dark d-inline-block w-100" do %>
+  <%= render "rooms/room", room: request.room %>
+  <% end %>
+<% end %>
