@@ -6,6 +6,7 @@
   padding: 1em;
   font-family: "DM Sans";
   font-weight: bold;
+  border: 4px solid transparent;
 }
 
 .card-moon-night-icon-wrapper {
@@ -19,3 +20,7 @@
 .card-moon-night-description-wrapper {
   margin-bottom: 0;
 }
+
+  input:checked + .card-moon-night{
+    border: 4px solid blue;
+  }

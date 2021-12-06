@@ -27,3 +27,4 @@ class Host::RoomsController < ApplicationController
     params.require(:room).permit(:id, :summary, :address, :housing_types)
   end
 end
+
