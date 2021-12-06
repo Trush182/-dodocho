@@ -1,32 +1,61 @@
 .card-index {
     background-color: white;
-    border-radius: 0.3em;
+    border-radius: 0.4em;
 }
 .card-index-image-wrapper {
-    padding: 0em;
-    border-radius: 0.4em 0.4em 0.3em 0.4em;
-    justify-content: center;
-    align-items: center;
+    padding: 1em;
+    border-radius: 0.4em 0.4em 0 0;
+    display: flex;
+    align-items: flex-end;
     width: 100%;
-    object-fit: cover;
+    height: 150px;
+
+    h2 {
+      color: white;
+      font-size: 20px;
+      font-weight: bolder;
+      margin: 0;
+    }
 }
 
 .card-index-description-wrapper {
     padding: 0em;
-    border-radius: 0.4em 0.4em 0.3em 0.4em;
+    border-radius: 0.4em;
     background: white;
     width: 100%;
     font-family: "DM Sans";
     font-weight: bold;
-    border-radius: 4px;
 }
 
 .card-footer-description-wrapper {
     padding: 0em;
-    border-radius: 0.4em 0.4em 0.3em 0.4em;
+    border-radius: 0.4em;
     background: white;
     width: 100%;
     font-family: "DM Sans";
     font-weight: bold;
-    border-radius: 4px;
+
+    .fa-tv {
+      color: #CF976F;
+    }
+
+    .fa-wifi {
+      color: #2A167B;
+    }
+
+    .fa-book {
+      color: #6FCF97;
+    }
+
+    .fa-sink {
+      color: #09B2D7;
+    }
+
+    .fa-map-marker-alt {
+      color: #FFB84E;
+    }
+
+    .text-right {
+      color: #FFB84E;
+    }
 }
