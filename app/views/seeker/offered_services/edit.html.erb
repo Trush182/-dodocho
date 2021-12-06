@@ -3,7 +3,6 @@
 
   <%= simple_form_for @user, url: seeker_offered_services_path do |f| %>
     <%#= f.input :services, as: :check_boxes, collection: ["Jardinage", "Courses", "Bricolage", "Cuisine", "Animaux"], include_hidden: false %>
-
     <div class="row">
       <% User::SEEKER_SERVICES.each do |service| %>
         <div class="form-check col-12">
@@ -18,6 +17,4 @@
 
     <%= f.submit "Suivant", class: "btn btn-gradient btn-block btn-lg mt-3" %>
   <% end %>
-
-
 </div>
