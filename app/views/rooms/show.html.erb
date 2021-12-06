@@ -5,10 +5,10 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <%= cl_image_tag @room.photos.first.key, height: 250, width: 350, class: "d-block w-100" %>
+          <%= cl_image_tag @room.photos.first.key, height: 250, width: 150, class: "d-block w-100" %>
         </div>
         <div class="carousel-item">
-          <%= cl_image_tag @room.photos.second.key, height: 250, width: 350, class: "d-block w-100" %>
+          <%= cl_image_tag @room.photos.second.key, height: 250, width: 150, class: "d-block w-100" %>
         </div>
       </div>
     <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
@@ -23,7 +23,7 @@
   </div>
   
   <div class="Description mb-20">
-    <div class="text-danger text-right">
+    <div class="text-right">
       <i class="fas fa-2x fa-map-marker-alt"></i>
       <%= "1.8 Km" %>
     </div>

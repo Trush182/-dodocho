@@ -1,8 +1,10 @@
 <div class="container h-100">
-  <div class="d-flex flex-column justify-content-around h-100">
-    <h1 class="text-center">DODOCHO</h1>
+  <div class="card-product d-flex flex-column align-items-center h-100 ">
+    <%# <%= image_tag('service-icons/home-page-dodo.jpg') %>
 
-    <div>
+    <%= image_tag('service-icons/main_logo.svg') %>
+
+
       <p class="text-center"><%= link_to 'JE CHERCHE UNE CHAMBRE', edit_seeker_offered_services_path, class: "btn btn-gradient" %></p>
       <p class="text-center"><%= link_to 'Je propose une chambre', new_host_room_path %></p>
     </div>
