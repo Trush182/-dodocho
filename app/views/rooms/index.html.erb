@@ -5,49 +5,9 @@
 
 <div class="container my-5">
   <div class="row px-3">
-
-  <%# go to partial to fix it 
-    
-    <% @rooms.each do |room| %>
-      <%= link_to room_path(room), class:"text-decoration-none text-dark d-inline-block w-100" do %>
-        <div class="card-index shadow mt-3">
-          <div class="card-index-image-wrapper" style="background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(<%= cl_image_path room.photos.first.key %>); background-size: cover">
-            <h2><%= room.title %></h2>
-          </div>
-
-          <div class="card-footer-description-wrapper p-3 d-flex justify-content-between align-items-center">
-            <div class="d-flex flex-row flex-grow-1">
-              <div>
-                <% if room.has_tv %>
-                  <i class="fas fa-1x fa-tv mr-2"></i>
-                <% end %>
-                <% if room.has_internet %>
-                  <i class="fas fa-1x fa-wifi mr-2"></i>
-                <% end %>
-                <% if room.has_books %>
-                  <i class="fas fa-1x fa-book mr-2"></i>
-                <% end %>
-                <% if room.has_personal_bathroom %>
-                  <i class="fas fa-1x fa-sink mr-2"></i>
-                <% end %>
-              </div>
-
-              <div class="text-right flex-grow-1 justify-content-end">
-                <i class="fas fa-1x fa-map-marker-alt mr-2"></i>
-                <%= "1.8 Km" %>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
-   %>
-    
-    
   <% @rooms.each do |room| %>
     <%= link_to room_path(room), class:"text-decoration-none text-dark d-inline-block w-100" do %>
     <%= render "room", room: room %>
-
     <% end %>
   <% end %>
   <%= link_to 'Modifier mes choix', edit_seeker_offered_services_path, class: "btn btn-gradient btn-block btn-lg mb-3 d-inline-block" %>
