@@ -5,6 +5,11 @@
     background-color: white;
     display: flex;
     border-radius: 0.3em;
+    border: 4px solid transparent;
+  }
+
+  input:checked + .card-service {
+    border: 4px solid rgb(2, 182, 104);
   }
 
   .card-service-icon-wrapper {
