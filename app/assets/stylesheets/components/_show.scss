@@ -1,0 +1,23 @@
+.card-background {
+  background-color: rgba(245, 215, 186, 0.945);
+}
+
+.card-description-wrapper > h4 {
+  color: rgb(240, 93, 40);
+  font-family: "DM Sans";
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-description-wrapper > p {
+  color: black;
+  font-size: 1rem;
+  font-family: "DM Sans";
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
