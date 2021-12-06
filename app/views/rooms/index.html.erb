@@ -2,9 +2,12 @@
   <h1 style="font-size: 2em;">Chambres disponibles</h1>
   <p>Vous avez demandé aux hôtes de vous loger pour <%= session[:nights_count_chosen] %> nuitées</p>
 </div>
+
 <div class="container my-5">
   <div class="row px-3">
 
+  <%# go to partial to fix it 
+    
     <% @rooms.each do |room| %>
       <%= link_to room_path(room), class:"text-decoration-none text-dark d-inline-block w-100" do %>
         <div class="card-index shadow mt-3">
@@ -37,8 +40,15 @@
           </div>
         </div>
       <% end %>
-    <% end %>
-  </div>
 
+   %>
+    
+    
+  <% @rooms.each do |room| %>
+    <%= link_to room_path(room), class:"text-decoration-none text-dark d-inline-block w-100" do %>
+    <%= render "room", room: room %>
+
+    <% end %>
+  <% end %>
   <%= link_to 'Modifier mes choix', edit_seeker_offered_services_path, class: "btn btn-gradient btn-block btn-lg mb-3 d-inline-block" %>
 </div>

@@ -1,0 +1,20 @@
+<div class="mt-20 title-summary">
+  <h4><%= @room.title %></h4>
+    <br>
+    <br>
+  <h5 class="text-dark"><%= @room.summary %></h5>
+</div>
+<div class="text-center mb-50">
+  <% if @room.has_tv %>
+    <i class="fas fa-2x fa-tv"></i>
+  <% end %>
+  <% if @room.has_internet %>
+    <i class="fas fa-2x fa-wifi"></i>
+  <% end %>
+  <% if @room.has_books %>
+    <i class="fas fa-2x fa-book"></i>
+  <% end %>
+  <% if @room.has_personal_bathroom %>
+    <i class="fas fa-2x fa-sink"></i>
+  <% end %>
+</div>
