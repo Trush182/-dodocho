@@ -21,3 +21,39 @@
   align-items: center;
 }
 
+.card-footer-description-wrapper {
+    padding: 0em;
+    border-radius: 0.4em;
+    background: white;
+    width: 60%;
+    font-family: "DM Sans";
+    font-weight: bold;
+
+    .fa-tv {
+      color: #CF976F;
+    }
+
+    .fa-wifi {
+      color: #2A167B;
+    }
+
+    .fa-book {
+      color: #6FCF97;
+    }
+
+    .fa-sink {
+      color: #09B2D7;
+    }
+
+    .fa-map-marker-alt {
+      color: #FFB84E;
+    }
+
+    .text-right {
+      color: #FFB84E;
+    }
+}
+
+.cover {
+  object-fit: cover;
+}

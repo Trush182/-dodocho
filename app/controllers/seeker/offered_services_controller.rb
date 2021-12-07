@@ -12,6 +12,6 @@ class Seeker::OfferedServicesController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:id, :services => [])
+    params.require(:user).permit(:id, services: [])
   end
 end

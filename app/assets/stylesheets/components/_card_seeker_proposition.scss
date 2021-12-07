@@ -1,50 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+.services-container {
+  height:  -webkit-fill-available;
+  padding-top: 2rem;
+}
 
-  .card-service {
-    background-color: white;
-    display: flex;
-    border-radius: 0.3em;
-    border: 4px solid transparent;
+.edit_user {
+  height: 100%;
+}
+
+.card-service {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 0.6em;
+  border: 4px solid rgba(0,0,0,0);
+  box-shadow: 0px 1px grey !important;
+
+  .fas {
+    opacity: 0;
+    color: red;
+    font-size: 1.5rem;
+  }
+}
+
+.infos-services {
+  align-items: center;
+  width: -webkit-fill-available;
+  justify-content: space-around;
+}
+
+input:checked + .card-service--crafting {
+  border: 4px solid #2A167B;
+
+  .fas {
+    opacity: 1;
+    color: #2A167B;
   }
 
-  input:checked + .card-service {
-    border: 4px solid rgb(2, 182, 104);
-  }
-
-  .card-service-icon-wrapper {
-    padding: 1em;
-    border-radius: 0.3em 0 0 0.3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .card-service-icon-wrapper--shower {
+    background-color: #B3E7F3;
   }
 
   .card-service-icon-wrapper--gardening {
     background-color: rgba(111, 207, 151, 0.31);
+
+  }
+}
+
+input:checked + .card-service--gardening {
+  border: 4px solid  #6FCF97;
+
+  .fas {
+    opacity: 1;
+    color: #6FCF97;
+
+  }
+}
+
+input:checked + .card-service--shopping {
+  border: 4px solid  #09B2D7;
+
+  .fas {
+    opacity: 1;
+    color: #09B2D7;
+
+  }
+}
+
+input:checked + .card-service--pet-walking {
+  border: 4px solid  #CF976F;
+
+  .fas {
+    opacity: 1;
+    color: #CF976F;
+
+  }
+}
+
+input:checked + .card-service--cooking {
+  border: 4px solid #CF6F92;
+
+  .fas {
+    opacity: 1;
+    color: #CF6F92;
+
+  }
+}
+
+.card-service-icon-wrapper {
+  padding: 1em;
+  border-radius: 0.3em 0 0 0.3em;
+  height: auto;
+
+  img {
+    height: 50px;
   }
 
-  .card-service-icon-wrapper--shopping{
-    background-color: #B3E7F3;
-  }
+}
 
-  .card-service-icon-wrapper--pet-walking{
-    background-color: #F0DFD2;
-  }
+.card-service-icon-wrapper--gardening {
+  background-color: rgba(111, 207, 151, 0.31);
+}
 
-  .card-service-icon-wrapper--crafting{
-    background-color: #BDB7D6;
-  }
+.card-service-icon-wrapper--shopping{
+  background-color: #B3E7F3;
+}
 
-  .card-service-icon-wrapper--cooking{
-    background-color: #F0D2DD;
-  }
+.card-service-icon-wrapper--pet-walking{
+  background-color: #F0DFD2;
+}
 
-  .card-service-description-wrapper {
-    padding: 2em 0 2em 1.5em;
-    border-radius: 0 0.3em 0.3em 0;
-    background: white;
-    width: 100%;
-    font-family: "DM Sans";
-    font-weight: bold;
-  }
+.card-service-icon-wrapper--crafting{
+  background-color: #BDB7D6;
+}
+
+.card-service-icon-wrapper--cooking{
+  background-color: #F0D2DD;
+}
+
+.card-service-description-wrapper {
+  border-radius: 0 0.3em 0.3em 0;
+  background: white;
+  font-family: "DM Sans";
+  font-weight: bold;
+}

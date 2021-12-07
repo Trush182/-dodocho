@@ -20,7 +20,7 @@
       </div>
       <div class="text-right flex-grow-1 justify-content-end">
         <i class="fas fa-1x fa-map-marker-alt mr-2"></i>
-        <%= "1.8 Km" %>
+        <%= "#{Geocoder::Calculations.distance_between([room.latitude, room.longitude], @address_coordinates).floor(1)} Km" %>
       </div>
     </div>
   </div>

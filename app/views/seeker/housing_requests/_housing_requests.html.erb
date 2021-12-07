@@ -1,0 +1,28 @@
+<div class="card-index shadow mt-3">
+  <div class="card-index-image-wrapper" style="background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(<%= cl_image_path room.photos.first.key %>); background-size: cover">
+    <h2><%= room.title %></h2>
+  </div>
+  <div class="card-footer-description-wrapper p-3 d-flex justify-content-between align-items-center">
+    <div class="d-flex flex-row flex-grow-1">
+        <div>
+          <% if room.has_tv %>
+            <i class="fas fa-1x fa-tv mr-2"></i>
+          <% end %>
+          <% if room.has_internet %>
+            <i class="fas fa-1x fa-wifi mr-2"></i>
+          <% end %>
+          <% if room.has_books %>
+            <i class="fas fa-1x fa-book mr-2"></i>
+          <% end %>
+          <% if room.has_personal_bathroom %>
+            <i class="fas fa-1x fa-sink mr-2"></i>
+          <% end %>
+          <%# IMPLEMENTER STATUS PENDING SUR CARD HOUSING REQUEST %>
+        </div>
+      <div class="button-points"><i class="fas fa-ellipsis-h"></i>
+        <% if @housing_requests.status == "en attente" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

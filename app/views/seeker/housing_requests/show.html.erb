@@ -1,9 +1,15 @@
 <div class="mt-20 title-summary">
-  <h4><%= @room.title %></h4>
+  <h4><%= @room.description %></h4>
     <br>
     <br>
-  <h5 class="text-dark"><%= @room.summary %></h5>
+  <h5 class="text-dark"><%= @room.description %></h5>
 </div>
+
+
+
+
+
+
 <div class="text-center mb-50">
   <% if @room.has_tv %>
     <i class="fas fa-2x fa-tv"></i>
