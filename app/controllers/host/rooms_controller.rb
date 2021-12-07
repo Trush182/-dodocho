@@ -1,6 +1,6 @@
 class Host::RoomsController < ApplicationController
   def new
-    @room = Room.new(room_params)
+    @room = Room.new
   end
 
   def create

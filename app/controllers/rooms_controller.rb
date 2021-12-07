@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @rooms = Room.near(params[:address], 3)
-    @address_coordinates = Geocoder.coordinates(params[:address])
+    @address_coordinates = [params[:lat], params[:long]]
   end
 end
 

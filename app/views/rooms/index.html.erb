@@ -1,12 +1,12 @@
 <div class="container mt-5">
   <h1 style="font-size: 2em;">Chambres disponibles</h1>
-  <p>Vous avez demandé aux hôtes de vous loger pour <%= session[:nights_count_chosen] %> nuitées</p>
+  <%# session[:nights_count_chosen] %>
 </div>
 
 <div class="container my-5">
-  <div class="row px-3">
+  <div class="row px-3 index-cards">
   <% @rooms.each do |room| %>
-    <%= link_to room_path(room), class:"text-decoration-none text-dark d-inline-block w-100" do %>
+    <%= link_to room_path(room, lat: @address_coordinates.first, long: @address_coordinates.last), class:"text-decoration-none text-dark d-inline-block w-100" do %>
     <%= render "room", room: room %>
     <% end %>
   <% end %>
