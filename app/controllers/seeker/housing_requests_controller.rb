@@ -37,6 +37,5 @@ class Seeker::HousingRequestsController < ApplicationController
   def show
     @room_id_of_request = HousingRequest.find(params[:id]).room_id
     @room = Room.find(@room_id_of_request)
-    # render 'rooms/room'
   end
 end
