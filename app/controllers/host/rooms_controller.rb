@@ -1,6 +1,6 @@
 class Host::RoomsController < ApplicationController
   def new
-    @room = Room.new(room_params)
+    @room = Room.new
   end
 
   def create
@@ -27,4 +27,3 @@ class Host::RoomsController < ApplicationController
     params.require(:room).permit(:id, :summary, :address, :housing_types)
   end
 end
-
