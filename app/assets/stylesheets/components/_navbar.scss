@@ -6,6 +6,9 @@
     padding: .5rem 1rem;
     width: -webkit-fill-available;
     background: white;
+    position: absolute;
+    top: 0;
+    height: 3.5rem;
   }
 
   .navbar-toggler {
@@ -34,11 +37,11 @@
   }
 
   .navbar-toggler-icon:active{
-      -ms-transform: translateY(2px);
-      -webkit-transform: translateY(2px);
-      transform: translateY(2px);
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-      border-bottom: none;
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
   }
 
   .navbar-logo img {
@@ -49,6 +52,7 @@
     background-color: #FE5E41;
     padding: 2rem;
     border-radius: 0 0 .3em .3em;
+    margin-top: 3.5rem;
 
     .nav-item.active .nav-link {
       color: white;
