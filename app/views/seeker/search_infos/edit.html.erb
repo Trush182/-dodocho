@@ -1,28 +1,33 @@
-<%= form_tag seeker_search_infos_path, method: :patch do %>
-  <label for="">Où est-ce que je me trouve?</label>
-  <%= text_field_tag "search_infos[address]",
-    params.dig(:search_infos, :address),
-    class: "form-control"
-  %>
-
-  <h5>J'ai besoin d'une chambre pour</h5>
-
-  <% 1.upto(HousingRequest::MAX_NIGHTS_COUNT) do |nights_count| %>
-    <div>
-      <input class="d-none" type="radio" value="<%= nights_count %>" name="search_infos[nights_count]" id="<%= "search_infos_nights_count_#{nights_count}" %>">
-      <label for="<%= "search_infos_nights_count_#{nights_count}" %>" class="card-moon-night">
-        <div class="card-moon-night-icon-wrapper"><%= image_tag('moon-stars.svg', width: 48) %></div>
-        <%= "Une" if nights_count == 1 %>
-        <%= "Deux " if nights_count == 2 %>
-        <%= "Trois " if nights_count == 3 %>
-        <p class="card-moon-night-description-wrapper pl-1"> nuitée<%= "s" if nights_count > 1 %></p>
-      </label>
-
-      <%#= radio_button_tag 'search_infos[nights_count]', nights_count, false, class: "xxx" %>
-      <%#= label_tag "search_infos_nights_count_#{nights_count}", "#{nights_count} nuitée(s)" %>
+<div class="moon-container container mt-5">
+  <%= form_tag seeker_search_infos_path, class: "h-100", method: :patch do %>
+    <div class="d-flex flex-column h-100">
+      <div class="input-group mt-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fas fa-map-marker-alt"></i>
+        </span>
+        <%= text_field_tag "search_infos[address]",
+          params.dig(:search_infos, :address),
+          placeholder: "Où est-ce que je me trouve ?",
+          class: "form-control"
+        %>
+      <div class="flex-grow-1">
+        <p>J'ai besoin d'une chambre pour</p>
+        <% 1.upto(HousingRequest::MAX_NIGHTS_COUNT) do |nights_count| %>
+          <div class="mt-4">
+            <input class="d-none" type="radio" value="<%= nights_count %>" name="search_infos[nights_count]" id="<%= "search_infos_nights_count_#{nights_count}" %>">
+            <label for="<%= "search_infos_nights_count_#{nights_count}" %>" class="card-moon-night">
+              <div class="card-moon-night-icon-wrapper"><%= image_tag('moon-stars.svg', width: 48) %></div>
+              <p class="card-moon-night-description-wrapper pl-1 ">
+                <%= "Une" if nights_count == 1 %>
+                <%= "Deux " if nights_count == 2 %>
+                <%= "Trois " if nights_count == 3 %> nuit<%= "s" if nights_count > 1 %>
+              </p>
+              <i class="fas fa-check"></i>
+            </label>
+          </div>
+        <% end %>
+      </div>
+      <%= submit_tag "Valider",  class: "btn btn-gradient btn-block btn-lg my-3" %>
     </div>
   <% end %>
-
-  <%= submit_tag "Valider",  class: "btn btn-gradient btn-block btn-lg mt-3" %>
-
-<% end  %>
+</div>

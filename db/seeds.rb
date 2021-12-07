@@ -103,7 +103,7 @@ room_romain = Room.new(
   giveaway_description:       "",
   has_books:                  false,
   has_personal_bathroom:      true,
-  has_tv:                     false,
+  has_tv:                     true,
   has_internet:               true
 )
 room_romain.save!
@@ -125,7 +125,7 @@ room_josiane = Room.new(
   has_books:                  true,
   has_personal_bathroom:      true,
   has_tv:                     true,
-  has_internet:               true
+  has_internet:               false
 )
 room_josiane.save!
 
@@ -142,7 +142,7 @@ room_luis = Room.new(
   address:                    "6, rue de Belleville 44000 NANTES",
   housing_type:               "shared room",
   giveaway_description:       "",
-  has_books:                  false,
+  has_books:                  true,
   has_personal_bathroom:      false,
   has_tv:                     true,
   has_internet:               true
