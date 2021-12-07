@@ -18,11 +18,17 @@
             <i class="fas fa-1x fa-sink mr-2"></i>
           <% end %>
         </div>
-          <%# IMPLEMENTER STATUS PENDING SUR CARD HOUSING REQUEST %>
-      <%# <div class="button-points"><i class="fas fa-ellipsis-h"></i>
-        <% if @housing_requests.status == "en attente" %>
-        <%# <% end %>
-      <%# </div> %>
+      <div class="button-points"><i class="fas fa-ellipsis-h"></i>
+
+      <% if request.status == "pending" %>
+      pending
+      <% elsif request.status == "accepted" %>
+      accepted
+      <% elsif request.status == "declined" %>
+      declined
+      <% end %>
+
+      </div>
     </div>
   </div>
 </div>

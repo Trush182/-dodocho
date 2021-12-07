@@ -3,12 +3,12 @@ class Host::HousingRequestsController < ApplicationController
     @host_housing_requests = HousingRequest.includes(:room).where(rooms: {host_id: current_user.id})
     @pending = @host_housing_requests.where(status: "pending")
     @accepted = @host_housing_requests.where(status: "accepted")
-    @refused = @host_housing_requests.where(status: "refused")
+    @refused = @host_housing_requests.where(status: "declined")
   end
 
   def accept
     @housing_request = HousingRequest.find(params[:id])
-    @housing_request.status = "accepté"
+    @housing_request.status = "accepted"
     @housing_request.save!
 
     redirect_to host_housing_requests_path
@@ -16,7 +16,7 @@ class Host::HousingRequestsController < ApplicationController
 
   def decline
     @housing_request = HousingRequest.find(params[:id])
-    @housing_request.status = "refusé"
+    @housing_request.status = "declined"
     @housing_request.save!
 
     redirect_to host_housing_requests_path

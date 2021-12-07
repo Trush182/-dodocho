@@ -1,10 +1,6 @@
 class Seeker::HousingRequestsController < ApplicationController
   def index
-    @requests = current_user.requests
-    @housing_requests = HousingRequest.includes(:request).where(requests: {user: :seeker_id})
-    @pending = @housing_requests.where(status: "en attente")
-    @accepted = @housing_requests.where(status: "accepté")
-    @refused = @housing_requests.where(status: "refusé")
+    @requests = current_user.requests.includes(:room).order(created_at: :desc)
   end
 
   def create

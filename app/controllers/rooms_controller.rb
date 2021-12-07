@@ -14,4 +14,3 @@ class RoomsController < ApplicationController
     @address_coordinates = [params[:lat], params[:long]]
   end
 end
-
