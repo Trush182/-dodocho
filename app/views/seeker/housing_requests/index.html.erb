@@ -1,5 +1,10 @@
-<%  @requests.each do |request| %>
-  <%= link_to seeker_housing_request_path(request), class:"text-decoration-none text-dark d-inline-block w-100" do %>
-  <%= render "rooms/room", room: request.room %>
-  <% end %>
-<% end %>
+<div class="container my-5">
+  <div class="row px-3">
+    <h5>Mes demandes</h5>
+    <%  @requests.each do |request| %>
+      <%= link_to seeker_housing_request_path(request), class:"text-decoration-none text-dark d-inline-block w-100" do %>
+      <%= render "rooms/room", room: request.room %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
