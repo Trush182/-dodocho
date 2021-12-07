@@ -24,10 +24,10 @@
       </a>
     </div>
 
-    <div class="mt-3 py-3 container card-background flex-column d-flex flex-grow-1">
+    <div class="mt-3 py-3 container card-background rounded flex-column d-flex flex-grow-1">
       <div class="text-warning d-flex align-self-end font-weight-bold 1.8rem mb-3">
         <i class="fas fa-2x fa-map-marker-alt mr-3"></i>
-        <%= "#{Geocoder::Calculations.distance_between([@room.latitude, @room.longitude], @address_coordinates).floor(1)} Km" %>
+        <%= "#{@room.distance_from(@address_coordinates)} Km" %>
       </div>
 
       <div class="card-description-wrapper flex-grow-1">
