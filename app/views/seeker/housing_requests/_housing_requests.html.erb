@@ -20,8 +20,17 @@
           <%# IMPLEMENTER STATUS PENDING SUR CARD HOUSING REQUEST %>
         </div>
       <div class="button-points"><i class="fas fa-ellipsis-h"></i>
-        <% if @housing_requests.status == "en attente" %>
-        <% end %>
+
+
+      <% if request.status == "pending" %>
+      pending
+      <% elsif request.status == "accepted" %>
+      accepted
+      <% elsif request.status == "declined" %>
+      declined
+      <% end %>
+
+
       </div>
     </div>
   </div>
