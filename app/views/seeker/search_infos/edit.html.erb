@@ -1,17 +1,15 @@
 <div class="moon-container container mt-5">
   <%= form_tag seeker_search_infos_path, class: "h-100", method: :patch do %>
     <div class="d-flex flex-column h-100">
-      <div class="input-group">
+      <div class="input-group mt-3">
         <span class="input-group-text" id="basic-addon1">
           <i class="fas fa-map-marker-alt"></i>
         </span>
         <%= text_field_tag "search_infos[address]",
           params.dig(:search_infos, :address),
-          placeholder: "Où est-ce que je me trouve",
+          placeholder: "Où est-ce que je me trouve ?",
           class: "form-control"
         %>
-      </div>
-
       <div class="flex-grow-1">
         <p>J'ai besoin d'une chambre pour</p>
         <% 1.upto(HousingRequest::MAX_NIGHTS_COUNT) do |nights_count| %>
@@ -29,9 +27,7 @@
           </div>
         <% end %>
       </div>
-
       <%= submit_tag "Valider",  class: "btn btn-gradient btn-block btn-lg my-3" %>
     </div>
-
-  <% end  %>
+  <% end %>
 </div>
