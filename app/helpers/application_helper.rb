@@ -9,11 +9,11 @@ module ApplicationHelper
     }[service]
   end
 
-def real_status(status)
-  case status
-    when "pending" then "Pending"
-    when "accepted" then "Accepted"
-    when "refused" then "Refused"
+  def real_status(status)
+    case status
+      when "pending" then "Pending"
+      when "accepted" then "Accepted"
+      when "refused" then "Refused"
+    end
   end
-end
 end
