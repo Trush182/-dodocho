@@ -1,13 +1,18 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= cl_image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <img src="../assets/stylesheets/" alt="">
-  <% end %>
+  <div class="top-nav navbar">
+    <%# BACK BTN %>
+    <div class="button-back"><i class="fas fa-chevron-left"></i></div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <%# LOGO %>
+    <%= link_to root_path, class: "navbar-logo" do %>
+      <%= image_tag('service-icons/main_logo.svg') %>
+    <% end %>
 
+    <%# BTN MENU %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="navbar-icon"><i class="fas fa-bars"></i></div>
+    </button>
+  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -19,7 +24,6 @@
           <%= link_to "Mes demandes", seeker_housing_requests_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
-          <%# <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Action", "#", class: "dropdown-item" %>
             <%= link_to "Another action", "#", class: "dropdown-item" %>
