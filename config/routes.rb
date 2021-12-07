@@ -18,7 +18,7 @@ Rails.application.routes.draw do
         patch :accept
       end
     end
-    resources :rooms, only: [:new, :create]
+    resources :rooms, only: [:new, :create, :edit, :update]
   end
 
   namespace :seeker do
