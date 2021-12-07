@@ -7,5 +7,6 @@
     <p class="text-center">
       <%= link_to 'Je propose une chambre', new_host_room_path, class: "btn btn-outline-light font-weight-bold py-2 px-3" %>
     </p>
+      <%= button_to "logout", destroy_user_session_path, method: :delete   %>
   </div>
 </div>
