@@ -15,7 +15,7 @@
   align-items: center;
   border-radius: 0.6em;
   border: 4px solid rgba(0,0,0,0);
-  box-shadow: 0px 1px grey !important;
+  // box-shadow: 0px 1px grey !important;
 
   .fas {
     opacity: 0;
@@ -32,13 +32,14 @@
 
 input:checked + .card-service--crafting {
   border: 4px solid #2A167B;
+  box-shadow: 0px 1px grey !important;
 
   .fas {
     opacity: 1;
     color: #2A167B;
   }
 
-    .card-service-icon-wrapper--shower {
+  .card-service-icon-wrapper--shower {
     background-color: #B3E7F3;
   }
 
@@ -50,6 +51,7 @@ input:checked + .card-service--crafting {
 
 input:checked + .card-service--gardening {
   border: 4px solid  #6FCF97;
+  box-shadow: 0px 1px grey !important;
 
   .fas {
     opacity: 1;
@@ -60,6 +62,7 @@ input:checked + .card-service--gardening {
 
 input:checked + .card-service--shopping {
   border: 4px solid  #09B2D7;
+  box-shadow: 0px 1px grey !important;
 
   .fas {
     opacity: 1;
@@ -70,6 +73,7 @@ input:checked + .card-service--shopping {
 
 input:checked + .card-service--pet-walking {
   border: 4px solid  #CF976F;
+  box-shadow: 0px 1px grey !important;
 
   .fas {
     opacity: 1;
@@ -80,6 +84,7 @@ input:checked + .card-service--pet-walking {
 
 input:checked + .card-service--cooking {
   border: 4px solid #CF6F92;
+  box-shadow: 0px 1px grey !important;
 
   .fas {
     opacity: 1;
