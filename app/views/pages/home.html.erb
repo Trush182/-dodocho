@@ -1,12 +1,11 @@
-<div class="container h-100">
-  <div class="card-product d-flex flex-column align-items-center h-100 ">
-    <%#= image_tag('service-icons/home-page-dodo.jpg') %>
-
-    <%= image_tag('service-icons/main_logo.svg') %>
-
-
-      <p class="text-center"><%= link_to 'JE CHERCHE UNE CHAMBRE', edit_seeker_offered_services_path, class: "btn btn-gradient" %></p>
-      <p class="text-center"><%= link_to 'Je propose une chambre', new_host_room_path %></p>
-    </div>
+<div class="home-bg">
+  <%= image_tag 'service-icons/main_logo.svg', class: "home-logo" %>
+  <div class="home-bottom">
+    <p class="text-center mx-3">
+      <%= link_to 'JE CHERCHE UNE CHAMBRE', edit_seeker_offered_services_path, class: "btn btn-lg py-3 btn-gradient" %>
+      </p>
+    <p class="text-center">
+      <%= link_to 'Je propose une chambre', new_host_room_path, class: "btn btn-outline-light font-weight-bold py-2 px-3" %>
+    </p>
   </div>
 </div>
