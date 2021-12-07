@@ -1,3 +1,25 @@
-.body {
-  background-image: url('service-icons/home-page-dodo.jpg') ;
+.home-bg {
+  background-image: linear-gradient(to bottom, rgba(50, 50, 50, 0.01), rgba(30, 30, 30, 0.5)),
+                    asset-url('service-icons/home-page-dodo.jpg');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  .home-logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 25vh;
+  }
+
+  .home-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+  }
 }

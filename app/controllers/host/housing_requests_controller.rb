@@ -4,7 +4,6 @@ class Host::HousingRequestsController < ApplicationController
     @pending = @housing_requests.where(status: "en attente")
     @accepted = @housing_requests.where(status: "accepté")
     @refused = @housing_requests.where(status: "refusé")
-
   end
 
   def accept
