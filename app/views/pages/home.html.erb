@@ -7,9 +7,7 @@
 
       <p class="text-center"><%= link_to 'JE CHERCHE UNE CHAMBRE', edit_seeker_offered_services_path, class: "btn btn-gradient" %></p>
       <p class="text-center"><%= link_to 'Je propose une chambre', new_host_room_path %></p>
+      <%= button_to "logout", destroy_user_session_path, method: :delete   %>
     </div>
   </div>
 </div>
-
-
-

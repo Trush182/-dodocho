@@ -1,5 +1,4 @@
 class Room < ApplicationRecord
-  FACILITIES = ["Douche", "TV", "Wifi", "Livres"]
   HOUSING_TYPES = ["dormitory", "personal room", "shared room"]
 
   geocoded_by :address

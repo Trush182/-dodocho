@@ -16,15 +16,16 @@ class Host::RoomsController < ApplicationController
   end
 
   def update
-    @room.update(summary: params[:room][:summary], address: params[:room][:address], housing_types: params[:room][:housing_types])
-
+    @room = Room.find(params[:id])
+    @room.update(room_params)
     redirect_to room_path
   end
+
+  # :has_books, :has_internet, :has_tv, :has_personal_bathroom
 
   private
 
   def room_params
-    params.require(:room).permit(:id, :summary, :address, :housing_types)
+    params.require(:room).permit(:id, :summary, :address, :housing_types, :has_books, :has_internet, :has_tv, :has_personal_bathroom)
   end
 end
-

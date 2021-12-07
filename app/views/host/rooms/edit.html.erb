@@ -1,11 +1,12 @@
 <div class="container mt-5">
-  <h4>Les services que je peux rendre</h4>
+  <h4>Les services que je peux offrir</h4>
 
   <%= simple_form_for @room, url: host_room_path(@room) do |f| %>
     <%#= f.input :services, as: :check_boxes, collection: ["Jardinage", "Courses", "Bricolage", "Cuisine", "Animaux"], include_hidden: false %>
 
     <div class="row">
       <div class="form-check col-12">
+        <input type="hidden" value="0" name="room[has_books]">
         <input class="form-check-input is-valid check_boxes optional d-none" type="checkbox" checked="<%= "checked" if @room.has_books %>" name="room[has_books]" id="room_has_books">
         <label for="room_has_books" class="card-service shadow-sm">
             <div class="card-service-icon-wrapper card-service-icon-wrapper--gardening"><%= image_tag("service-icons/livres.svg", width: 48) %></div>
@@ -15,27 +16,30 @@
     </div>
         <div class="row">
       <div class="form-check col-12">
+      <input type="hidden" value="0" name="room[has_tv]">
         <input class="form-check-input is-valid check_boxes optional d-none" type="checkbox" checked="<%= "checked" if @room.has_tv %>" name="room[has_tv]" id="room_has_tv">
         <label for="room_has_tv" class="card-service shadow-sm">
-            <div class="card-service-icon-wrapper card-service-icon-wrapper--gardening"><%= image_tag("service-icons/tv.svg", width: 48) %></div>
+            <div class="card-service-icon-wrapper card-service-icon-wrapper--pet-walking"><%= image_tag("service-icons/tv.svg", width: 48) %></div>
             <div class="card-service-description-wrapper">TV</div>
         </label>
       </div>
     </div>
         <div class="row">
       <div class="form-check col-12">
+      <input type="hidden" value="0" name="room[has_internet]">
         <input class="form-check-input is-valid check_boxes optional d-none" type="checkbox" checked="<%= "checked" if @room.has_internet %>" name="room[has_internet]" id="room_has_internet">
         <label for="room_has_internet" class="card-service shadow-sm">
-            <div class="card-service-icon-wrapper card-service-icon-wrapper--gardening"><%= image_tag("service-icons/wifi.svg", width: 48) %></div>
+            <div class="card-service-icon-wrapper card-service-icon-wrapper--crafting"><%= image_tag("service-icons/wifi.svg", width: 48) %></div>
             <div class="card-service-description-wrapper">Internet</div>
         </label>
       </div>
     </div>
         <div class="row">
       <div class="form-check col-12">
+      <input type="hidden" value="0" name="room[has_personal_bathroom]">
         <input class="form-check-input is-valid check_boxes optional d-none" type="checkbox" checked="<%= "checked" if @room.has_personal_bathroom %>" name="room[has_personal_bathroom]" id="room_has_personal_bathroom">
         <label for="room_has_personal_bathroom" class="card-service shadow-sm">
-            <div class="card-service-icon-wrapper card-service-icon-wrapper--gardening"><%= image_tag("service-icons/douche.svg", width: 48) %></div>
+            <div class="card-service-icon-wrapper card-service-icon-wrapper--shower"><%= image_tag("service-icons/douche.svg", width: 48) %></div>
             <div class="card-service-description-wrapper">Douche</div>
         </label>
       </div>

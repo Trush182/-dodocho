@@ -5,11 +5,6 @@
     background-color: white;
     display: flex;
     border-radius: 0.3em;
-    border: 4px solid transparent;
-  }
-
-  input:checked + .card-service {
-    border: 4px solid rgb(2, 182, 104);
   }
 
   .card-service-icon-wrapper {
@@ -18,6 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+    .card-service-icon-wrapper--shower {
+    background-color: #B3E7F3;
   }
 
   .card-service-icon-wrapper--gardening {
@@ -48,3 +47,8 @@
     font-family: "DM Sans";
     font-weight: bold;
   }
+
+
+input:checked + .card-service {
+  border: 1px solid green;
+}
