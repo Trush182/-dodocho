@@ -10,7 +10,7 @@
             <% User::SEEKER_SERVICES.each do |service| %>
               <div class="form-check col-12">
                 <input class="form-check-input is-valid check_boxes optional d-none" type="checkbox" value="<%= service %>" name="user[services][]" id="user_services_<%= service.downcase %>">
-                <label for="user_services_<%= service.downcase %>" class="card-service card-service--<%= service_name_to_skill(service) %> flex-grow-1 shadow-sm">
+                <label for="user_services_<%= service.downcase %>" class="card-service card-service--<%= service_name_to_skill(service) %> flex-grow-1 shadow">
                     <div class="card-service-icon-wrapper card-service-icon-wrapper--<%= service_name_to_skill(service) %>"><%= image_tag("service-icons/#{service_name_to_skill(service)}.svg") %></div>
                       <div class="d-flex infos-services">
                         <div class="card-service-description-wrapper"><%= service %></div>
@@ -28,4 +28,3 @@
     <% end %>
   </div>
 </div>
-
