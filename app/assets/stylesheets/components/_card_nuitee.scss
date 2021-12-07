@@ -1,5 +1,10 @@
 .moon-container {
   height:  -webkit-fill-available;
+  padding-top: 2rem;
+
+  .input-group-text {
+    border-radius: 10px 0 0 10px;
+  }
 }
 
 .card-moon-night {
