@@ -2,10 +2,10 @@
   <%= image_tag 'service-icons/main_logo.svg', class: "home-logo" %>
   <div class="home-bottom">
     <p class="text-center mx-3">
-      <%= link_to 'JE CHERCHE UNE CHAMBRE', edit_seeker_offered_services_path, class: "btn btn-lg py-3 btn-gradient" %>
+      <%= link_to 'JE CHERCHE UNE CHAMBRE', edit_seeker_offered_services_path, class: "btn btn-gradient btn-block btn-lg mb-5"%>
       </p>
     <p class="text-center">
-      <%= link_to 'Je propose une chambre', new_host_room_path, class: "btn btn-outline-light font-weight-bold py-2 px-3" %>
+      <%= link_to 'Je propose une chambre', new_host_room_path, class: "btn btn-outline-light font-weight-bold py-2 px-5" %>
     </p>
       <%= button_to "logout", destroy_user_session_path, method: :delete   %>
   </div>
