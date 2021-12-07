@@ -4,9 +4,9 @@
 </div>
 
 <div class="container my-5">
-  <div class="row px-3">
+  <div class="row px-3 index-cards">
   <% @rooms.each do |room| %>
-    <%= link_to room_path(room), class:"text-decoration-none text-dark d-inline-block w-100" do %>
+    <%= link_to room_path(room, lat: @address_coordinates.first, long: @address_coordinates.last), class:"text-decoration-none text-dark d-inline-block w-100" do %>
     <%= render "room", room: room %>
     <% end %>
   <% end %>

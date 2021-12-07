@@ -1,8 +1,9 @@
-.card-index {
+.index-cards {
+  .card-index {
     background-color: white;
     border-radius: 0.4em;
-}
-.card-index-image-wrapper {
+  }
+  .card-index-image-wrapper {
     padding: 1em;
     border-radius: 0.4em 0.4em 0 0;
     display: flex;
@@ -16,18 +17,18 @@
       font-weight: bolder;
       margin: 0;
     }
-}
+  }
 
-.card-index-description-wrapper {
+  .card-index-description-wrapper {
     padding: 0em;
     border-radius: 0.4em;
     background: white;
     width: 100%;
     font-family: "DM Sans";
     font-weight: bold;
-}
+  }
 
-.card-footer-description-wrapper {
+  .card-footer-description-wrapper {
     padding: 0em;
     border-radius: 0.4em;
     background: white;
@@ -58,6 +59,7 @@
     .text-right {
       color: #FFB84E;
     }
+  }
 }
 
 
