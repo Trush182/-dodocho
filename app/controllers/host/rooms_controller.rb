@@ -11,15 +11,15 @@ class Host::RoomsController < ApplicationController
     redirect_to host_root_path
   end
 
-  def edit
-    @room = Room.find(params[:id])
-  end
+  # def edit
+  #   @room = Room.find(params[:id])
+  # end
 
-  def update
-    @room = Room.find(params[:id])
-    @room.update(room_params)
-    redirect_to room_path
-  end
+  # def update
+  #   @room = Room.find(params[:id])
+  #   @room.update(room_params)
+  #   redirect_to room_path
+  # end
 
   # :has_books, :has_internet, :has_tv, :has_personal_bathroom
 
