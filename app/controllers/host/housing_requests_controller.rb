@@ -1,5 +1,6 @@
 class Host::HousingRequestsController < ApplicationController
   def index
+    @requests = current_user.requests.includes(:room).order(created_at: :desc)
     @host_housing_requests = HousingRequest.includes(:room).where(rooms: {host_id: current_user.id})
     @pending = @host_housing_requests.where(status: "pending")
     @accepted = @host_housing_requests.where(status: "accepted")
