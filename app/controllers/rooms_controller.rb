@@ -12,5 +12,9 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @rooms = Room.near(params[:address], 3)
     @address_coordinates = [params[:lat], params[:long]]
+    @can_see_details = current_user.requests
+                                   .where(room: @room, status: "accepted")
+                                   .where("housing_requests.end_date >= ?", Date.today)
+                                   .exists?
   end
 end
