@@ -38,8 +38,8 @@ class Seeker::HousingRequestsController < ApplicationController
     @room_id_of_request = HousingRequest.find(params[:id]).room_id
     @room = Room.find(@room_id_of_request)
     @can_see_details = current_user.requests
-                                    .where(room: @room, status: "accepted")
-                                    .where("housing_requests.end_date >= ?", Date.today)
-                                    .exists?
+                                   .where(room: @room, status: "accepted")
+                                   .where("housing_requests.end_date >= ?", Date.today)
+                                   .exists?
   end
 end

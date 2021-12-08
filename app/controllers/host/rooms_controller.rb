@@ -6,26 +6,17 @@ class Host::RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     @room.host = current_user
-    @room.save!
-
-    redirect_to host_root_path
+    if @room.save
+      # renvoyer l'utilisateur vers le formulaire d'edit de la room pour ajouter les équipements
+      redirect_to edit_host_offered_equipments_path
+    else
+      render 'new'
+    end
   end
-
-  # def edit
-  #   @room = Room.find(params[:id])
-  # end
-
-  # def update
-  #   @room = Room.find(params[:id])
-  #   @room.update(room_params)
-  #   redirect_to room_path
-  # end
-
-  # :has_books, :has_internet, :has_tv, :has_personal_bathroom
 
   private
 
   def room_params
-    params.require(:room).permit(:id, :summary, :address, :housing_types, :has_books, :has_internet, :has_tv, :has_personal_bathroom)
+    params.require(:room).permit(:id, :summary, :title, :body, :photos)
   end
 end

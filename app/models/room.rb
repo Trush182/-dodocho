@@ -10,8 +10,8 @@ class Room < ApplicationRecord
   has_many :housing_requests
 
   validates :summary, presence: true
-  validates :address, presence: true
-  validates :housing_type, presence: true, inclusion: { in: HOUSING_TYPES }
+  # validates :address, presence: true
+  # validates :housing_type, presence: true, inclusion: { in: HOUSING_TYPES }
 
   def distance_from(coordinates)
     Geocoder::Calculations.distance_between([latitude, longitude], coordinates).floor(1)
