@@ -15,6 +15,6 @@
   background-color: rgba(111, 207, 151, 0.31);;
 }
 
-input:checked + .card-service {
+.input:checked + .card-service {
   border: 1px solid red;
 }

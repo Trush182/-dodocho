@@ -1,0 +1,30 @@
+
+<div class="services-container container mt-5">
+  <div class="d-flex flex-column h-100">
+    <h4>Elle dispose de</h4>
+
+    <%= simple_form_for @room, url: host_offered_equipments_path do |f| %>
+      <div class="d-flex flex-column h-100">
+        <div class="flex-grow-1">
+          <div class="row">
+            <% User::HOST_EQUIPMENTS.each do |equipments| %>
+              <div class="form-check col-12">
+                <input class="form-check-input is-valid check_boxes optional d-none" type="checkbox" value="<%= equipments %>" name="user[services][]" id="user_services_<%= equipments.downcase %>">
+                <label for="user_services_<%= equipments.downcase %>" class="card-service card-service--<%= equipments_name_to_skill(equipments) %> flex-grow-1 shadow">
+                  <div class="card-service-icon-wrapper---brown card-service-icon-wrapper--<%= equipments_name_to_skill(equipments) %>"><%= image_tag("service-icons/#{equipments_name_to_skill(equipments)}.svg") %></div>
+                    <div class="d-flex infos-services">
+                      <div class="card-service-description-wrapper"><%= equipments %></div>
+                      <i class="fas fa-check"></i>
+                    </div>
+                </label>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div>
+          <%= f.submit "Suivant", class: "btn btn-gradient btn-block btn-lg my-3" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
