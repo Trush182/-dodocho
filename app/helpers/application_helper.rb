@@ -9,6 +9,15 @@ module ApplicationHelper
     }[service]
   end
 
+  def equipments_name_to_skill(equipments)
+    {
+      "TV" => "tv",
+      "Douche" => "douche",
+      "Wifi" => "wifi",
+      "Livres" => "livres"
+    }[equipments]
+  end
+
   def real_status(status)
     case status
       when "pending" then "Pending"
