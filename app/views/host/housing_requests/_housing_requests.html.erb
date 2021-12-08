@@ -4,36 +4,46 @@
   </div>
   <div class="card-footer-description-wrapper p-3 d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center justify-content-between flex-row flex-grow-1">
-      <div class="d-flex">
-        <% if room.has_tv %>
-          <i class="fas fa-1x fa-tv mr-2"></i>
-        <% end %>
-        <% if room.has_internet %>
-          <i class="fas fa-1x fa-wifi mr-2"></i>
-        <% end %>
-        <% if room.has_books %>
-          <i class="fas fa-1x fa-book mr-2"></i>
-        <% end %>
-        <% if room.has_personal_bathroom %>
-          <i class="fas fa-1x fa-sink mr-2"></i>
-        <% end %>
-      </div>
-      <div class="d-flex align-items-center">
-        <% if request.status == "pending" %>
-          <p class="mr-2 mb-0">En attente</p>
-          <div class="button-points">
-            <i class="fas fa-ellipsis-h"></i>
+      <div class="d-flex flex-grow-1 align-items-center justify-content-between">
+        <div>
+          <% if room.has_tv %>
+            <i class="fas fa-1x fa-tv mr-2"></i>
+          <% end %>
+          <% if room.has_internet %>
+            <i class="fas fa-1x fa-wifi mr-2"></i>
+          <% end %>
+          <% if room.has_books %>
+            <i class="fas fa-1x fa-book mr-2"></i>
+          <% end %>
+          <% if room.has_personal_bathroom %>
+            <i class="fas fa-1x fa-sink mr-2"></i>
+          <% end %>
+        </div>
+        <% if housing_request.status == "pending" %>
+          <div class="d-flex">
+            <div class="button-checked mr-3">
+              <%= link_to accept_host_housing_request_path(housing_request), method: :patch do %>
+                <i class="fas fa-check"></i>
+              <% end %>
+            </div>
+            <div class="button-refuse">
+              <%= link_to decline_host_housing_request_path(housing_request), method: :patch do %>
+                <i class="fas fa-times"></i>
+              <% end %>
+            </div>
           </div>
-        <% elsif request.status == "accepted" %>
-          <p class="mr-2 mb-0">Acceptée</p>
-          <div class="button-checked">
-            <i class="fas fa-check"></i>
-          </div>
-        <% elsif request.status == "declined" %>
-          <p class="mr-2 mb-0">Refusée</p>
-          <div class="button-refuse">
-            <i class="fas fa-times"></i>
-          </div>
+        <% else %>
+          <% if housing_request.status == "accepted" %>
+            <p class="mr-2 mb-0">Acceptée</p>
+            <div class="button-checked">
+              <i class="fas fa-check"></i>
+            </div>
+          <% elsif housing_request.status == "declined" %>
+            <p class="mr-2 mb-0">Refusée</p>
+            <div class="button-refuse">
+              <i class="fas fa-times"></i>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>
