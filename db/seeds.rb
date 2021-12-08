@@ -43,6 +43,18 @@ aline.photo.attach(io: aline_profile_pic, filename: 'aline.jpg', content_type: '
 # HOSTS *****************************************************************
 puts "Creating Hosts..."
 
+firas = User.create!(
+  name: "Firas",
+  description: "J'ai une chambre disponible pour qui en a besoin",
+  email: "firas@gmail.com",
+  password: "secret",
+  profile_image: "#",
+  phone_number: "0657197768"
+)
+
+firas_profile_pic = File.open(Rails.root.join('db/fixtures/users', 'firas.jpg'))
+firas.photo.attach(io: firas_profile_pic, filename: 'firas.jpg', content_type: 'image/jpg')
+
 romain = User.create!(
   name: "Romain",
   description: "J'ai une chambre disponible pour qui en a besoin",
@@ -114,6 +126,9 @@ room_romain.photos.attach(io: room_romain_profile_pic, filename: 'room_romain_1.
 room_romain_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_romain_2.jpg'))
 room_romain.photos.attach(io: room_romain_profile_pic, filename: 'room_romain_2.jpg', content_type: 'image/jpg')
 
+room_romain_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_romain_3.jpg'))
+room_romain.photos.attach(io: room_romain_profile_pic, filename: 'room_romain_3.jpg', content_type: 'image/jpg')
+
 room_josiane = Room.new(
 
   host:                       josiane,
@@ -135,6 +150,9 @@ room_josiane.photos.attach(io: room_josiane_profile_pic, filename: 'room_josiane
 room_josiane_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_josiane_2.jpg'))
 room_josiane.photos.attach(io: room_josiane_profile_pic, filename: 'room_josiane_2.jpg', content_type: 'image/jpg')
 
+room_josiane_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_josiane_3.jpg'))
+room_josiane.photos.attach(io: room_josiane_profile_pic, filename: 'room_josiane_3.jpg', content_type: 'image/jpg')
+
 room_luis = Room.new(
   host:                       luis,
   title:                      "Chambre partagée dans mon studio",
@@ -155,11 +173,14 @@ room_luis.photos.attach(io: room_luis_profile_pic, filename: 'room_luis_1.jpg', 
 room_luis_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_luis_2.jpg'))
 room_luis.photos.attach(io: room_luis_profile_pic, filename: 'room_luis_2.jpg', content_type: 'image/jpg')
 
+room_luis_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_luis_3.jpg'))
+room_luis.photos.attach(io: room_luis_profile_pic, filename: 'room_luis_3.jpg', content_type: 'image/jpg')
+
 room_hubert = Room.new(
   host:                       hubert,
   title:                      "Chambre d'ami à disposition",
   summary:                    "Je propose ma chambre d'ami innocupée en ce moment",
-  address:                    "15, rue Robert Douineau 44300 SAINT SEBASTIEN SUR LOIRE ",
+  address:                    "15, rue Robert Douineau 44300 SAINT SEBASTIEN SUR LOIRE",
   housing_type:               "personal room",
   giveaway_description:       "",
   has_books:                  true,
@@ -177,5 +198,28 @@ room_hubert.photos.attach(io: room_hubert_profile_pic, filename: 'room_hubert_2.
 
 room_hubert_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_hubert_3.jpg'))
 room_hubert.photos.attach(io: room_hubert_profile_pic, filename: 'room_hubert_3.jpg', content_type: 'image/jpg')
+
+room_firas = Room.new(
+  host:                       firas,
+  title:                      "Canapé à disposition dans mon studio pour quelqu",
+  summary:                    "J'ai une place dans mon appartemment pour accueillir quelqu'un qui a besoin de dormir au chaud.",
+  address:                    "8, rue Georges Clémenceau 44000 NANTES",
+  housing_type:               "personal room",
+  giveaway_description:       "",
+  has_books:                  true,
+  has_personal_bathroom:      true,
+  has_tv:                     true,
+  has_internet:               true
+)
+room_firas.save!
+
+room_firas_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_firas_1.jpg'))
+room_firas.photos.attach(io: room_firas_profile_pic, filename: 'room_firas_1.jpg', content_type: 'image/jpg')
+
+room_firas_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_firas_2.jpg'))
+room_firas.photos.attach(io: room_firas_profile_pic, filename: 'room_firas_2.jpg', content_type: 'image/jpg')
+
+room_firas_profile_pic = File.open(Rails.root.join('db/fixtures/rooms', 'room_firas_3.jpg'))
+room_firas.photos.attach(io: room_firas_profile_pic, filename: 'room_firas_3.jpg', content_type: 'image/jpg')
 
 # puts "Creating Housing Requests"
