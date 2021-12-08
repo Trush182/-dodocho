@@ -19,6 +19,10 @@ Rails.application.routes.draw do
       end
     end
     resources :rooms, only: [:new, :create]
+
+    resource :offered_equipments, only: [:edit, :update]
+    resource :night_proposal, only: [:edit, :update]
+
   end
 
   namespace :seeker do
