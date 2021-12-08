@@ -1,9 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="top-nav navbar">
     <%# BACK BTN %>
-    <div class="button-back"><i class="fas fa-chevron-left"></i><% link_to root_path %></div>
-
-
+    <%= link_to url_for(:back) do %>
+    <div class="button-back"><i class="fas fa-chevron-left"></i></div>
+    <% end %>
+    
     <%# LOGO %>
     <%= link_to root_path, class: "navbar-logo" do %>
       <%= image_tag('service-icons/main_logo.svg') %>
