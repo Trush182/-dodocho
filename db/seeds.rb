@@ -179,7 +179,7 @@ room_luis.photos.attach(io: room_luis_profile_pic, filename: 'room_luis_3.jpg', 
 room_hubert = Room.new(
   host:                       hubert,
   title:                      "Chambre d'ami à disposition",
-  summary:                    "Je propose ma chambre d'ami innocupée en ce moment",
+  summary:                    "Je propose ma chambre d'ami inocupée en ce moment",
   address:                    "15, rue Robert Douineau 44300 SAINT SEBASTIEN SUR LOIRE",
   housing_type:               "personal room",
   giveaway_description:       "",

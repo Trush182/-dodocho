@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
     resource :offered_equipments, only: [:edit, :update]
     resource :night_proposal, only: [:edit, :update]
+
   end
 
   namespace :seeker do
