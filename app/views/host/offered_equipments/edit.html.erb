@@ -1,0 +1,69 @@
+<div class="services-container container mt-5">
+  <div class="d-flex flex-column h-100">
+    <h4>Les équipements dont la chambre dispose</h4>
+
+    <%= simple_form_for @user, url: seeker_offered_services_path do |f| %>
+
+      <div class="d-flex flex-column h-100">
+        <div class="flex-grow-1">
+          <div class="row">
+            <% User::HOST_EQUIPMENTS.each do |equipment| %>
+              <div class="form-check col-12">
+                <input class="form-check-input is-valid check_boxes optional d-none" type="checkbox" value="<%= equipment %>" name="user[equipments][]" id="user_equipments_<%= equipment.downcase %>">
+                <label for="user_equipments_<%= equipment.downcase %>" class="card-service card-service--<%= equipment_name_to_skill(equipment) %> flex-grow-1 shadow">
+                  <div class="card-service-icon-wrapper card-service-icon-wrapper--<%= equipment_name_to_skill(equipment) %>"><%= image_tag("service-icons/#{equipment_name_to_skill(equipment)}.svg") %></div>
+                    <div class="d-flex infos-services">
+                      <div class="card-service-description-wrapper"><%= equipment %></div>
+                      <i class="fas fa-check"></i>
+                    </div>
+                </label>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div>
+          <%= f.submit "Suivant", class: "btn btn-gradient btn-block btn-lg my-3" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+            <label for="user_services_jardinage" class="card-service card-service--gardening flex-grow-1 shadow">
+              <div class="card-service-icon-wrapper card-service-icon-wrapper---blue"><img src="/assets/service-icons/shower.svg"></div>
+                <div class="d-flex infos-services">
+                  <div class="card-service-description-wrapper">Douche</div>
+                  <i class="fas fa-check"></i>
+                </div>
+            </label>
+
+<label for="user_services_jardinage" class="card-service card-service--gardening flex-grow-1 shadow">
+  <div class="card-service-icon-wrapper card-service-icon-wrapper---brown"><img src="/assets/service-icons/television.svg"></div>
+    <div class="d-flex infos-services">
+      <div class="card-service-description-wrapper">TV</div>
+      <i class="fas fa-check"></i>
+    </div>
+</label>
+
+
+<label for="user_services_jardinage" class="card-service card-service--gardening flex-grow-1 shadow">
+  <div class="card-service-icon-wrapper card-service-icon-wrapper---purple"><img src="/assets/service-icons/internet.svg"></div>
+    <div class="d-flex infos-services">
+      <div class="card-service-description-wrapper">Wifi</div>
+      <i class="fas fa-check"></i>
+    </div>
+</label>
+
+
+
+<label for="user_services_jardinage" class="card-service card-service--gardening flex-grow-1 shadow">
+  <div class="card-service-icon-wrapper card-service-icon-wrapper---green"><img src="/assets/service-icons/books.svg"></div>
+    <div class="d-flex infos-services">
+      <div class="card-service-description-wrapper">Livres</div>
+      <i class="fas fa-check"></i>
+    </div>
+</label>
+

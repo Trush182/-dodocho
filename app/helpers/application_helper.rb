@@ -8,6 +8,14 @@ module ApplicationHelper
       "Animaux" => "pet-walking"
     }[service]
   end
+  def equipment_name_to_skill(equipment)
+    {
+      "Douche" => "shower",
+      "TV" => "television",
+      "Wifi" => "internet",
+      "Livres" => "books"
+    }[equipment]
+  end
 
   def equipments_name_to_skill(equipments)
     {
