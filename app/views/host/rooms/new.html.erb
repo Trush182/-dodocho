@@ -3,27 +3,24 @@
 
 <div class="container host-create d-flex flex-column h-100 py-3">
   <div class="host-1 flex-grow-1">
-
-
-
-    <%= simple_form_for @room, url: host_rooms_path do |f| %>
+    <%= simple_form_for @room, url: host_rooms_path, method: :post do |f| %>
       <%= f.input :title, label: "Titre" %>
       <%= f.input :summary, as: :text, :input_html => { :rows => 5 }, label: "Description"%>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.submit "Valider", class: "btn btn-gradient btn-block btn-lg mt-5" %>
     <% end %>
   </div>
+  <div class="pb-3  container">
+    <div class="ca">
+      <div class ="cont-icone d-flex justify-content-center"><i style="font-size:2em; color:#FE5E41;" class="align-self-center fas fa-plus"></i>
 
-<div class="pb-3  container">
-  <div class="ca">
-    <div class ="cont-icone d-flex justify-content-center"><i style="font-size:2em; color:#FE5E41;" class="align-self-center fas fa-plus"></i>
-        </div>
-        <h1 class="pt-2">Ajouter une photo?</h1>
-        <div class="d-flex">
-      <h2 class="bu" style="font-size:1em;">Une photo de votre demeure est un signe de crédibilité</h2>
+
+      </div>
+      <h1 class="pt-2">Ajouter une photo?</h1>
+      <div class="d-flex">
+        <h2 class="bu" style="font-size:1em;">Une photo de votre demeure est un signe de crédibilité</h2>
+      </div>
     </div>
-  </div>
-</div>
-
-<div>
-    <a class="btn btn-gradient" href="#">VALIDER</a>
+    <%# <%= link_to "VALIDER", host_rooms_path, class: "btn btn-gradient btn-block btn-lg mt-5" %>
   </div>
 </div>
