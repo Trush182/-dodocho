@@ -34,6 +34,10 @@
       <div class="card-description-wrapper flex-grow-1">
         <h4><%= @room.title %></h4>
         <p><%= @room.summary %></p>
+        <% if @can_see_details %>
+          <p>Retrouvez moi au <%= @room.address %></p>
+          <p>Me contacter au <%= @room.host.phone_number %></p>
+        <% end %>
       </div>
 
       <div class="card-footer-description-wrapper d-flex justify-content-around px-5 mx-auto py-3">
