@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   SEEKER_SERVICES = ["Jardinage", "Courses", "Bricolage", "Cuisine", "Animaux"]
-  HOST_SERVICES = ["Douche", "TV", "Wifi", "Livres"]
+  HOST_EQUIPMENTS = ["Douche", "TV", "Wifi", "Livres"]
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
