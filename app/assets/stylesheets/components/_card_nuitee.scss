@@ -1,6 +1,5 @@
 .moon-container {
-  height:  -webkit-fill-available;
-  padding-top: 2rem;
+  padding-top: 1rem;
 
   .input-group-text {
     border-radius: 10px 0 0 10px;
@@ -12,11 +11,16 @@
   display: flex;
   align-items: center;
   border-radius: 0.3em;
-  padding: 1em;
+  padding: 1rem 2rem;
   font-family: "DM Sans";
   font-weight: bold;
   border: 5px solid transparent;
-  justify-content: space-around;
+
+  .card-moon-night-description-wrapper {
+    margin-left: 3rem;
+    width: 100px;
+    margin-right: 1rem;
+  }
 
   .fas {
     opacity: 0;

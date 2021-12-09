@@ -1,28 +1,27 @@
-<div class="moon-container container mt-5">
+<div class="moon-container global-container-wrapper container">
   <%= form_tag seeker_search_infos_path, class: "h-100", method: :patch do %>
     <div class="d-flex flex-column h-100">
-      <div class="input-group mt-4">
-        <span class="input-group-text py-6 mb-4" id="basic-addon1">
-          <i class="fas fa-map-marker-alt"></i>
-        </span>
+      <div class="input-group input-group-lg mt-4">
+        <div class="input-group-preprend">
+          <span class="input-group-text h-100" id="basic-addon1">
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+        </div>
         <%= text_field_tag "search_infos[address]",
           params.dig(:search_infos, :address),
           placeholder: "Où est-ce que je me trouve ?",
           class: "form-control"
         %>
-        <br>
-        <br>
-        <br>
       </div>
-      <div class="flex-grow-1">
-        <p>J'ai besoin d'une chambre pour</p>
+      <div class="flex-grow-1 mt-5">
+        <h5 class="font-weight-bold">J'ai besoin d'une chambre pour</h5>
         <% 1.upto(HousingRequest::MAX_NIGHTS_COUNT) do |nights_count| %>
-          <div class="mt-4">
+          <div class="">
           <br>
 
             <input class="d-none" type="radio" value="<%= nights_count %>" name="search_infos[nights_count]" id="<%= "search_infos_nights_count_#{nights_count}" %>">
             <label for="<%= "search_infos_nights_count_#{nights_count}" %>" class="card-moon-night">
-              <div class="card-moon-night-icon-wrapper"><%= image_tag('moon-stars.svg', width: 48) %></div>
+              <div class="card-moon-night-icon-wrapper"><%= image_tag("moonstars-#{nights_count}.svg", width: 48) %></div>
               <p class="card-moon-night-description-wrapper pl-1 ">
                 <%= "Une" if nights_count == 1 %>
                 <%= "Deux " if nights_count == 2 %>
@@ -33,7 +32,7 @@
           </div>
         <% end %>
       </div>
-      <%= submit_tag "Valider",  class: "btn btn-gradient btn-block btn-lg my-3" %>
+      <%= submit_tag "Valider",  class: "btn btn-gradient btn-block btn-lg mt-3 mb-1" %>
     </div>
   <% end %>
 </div>

@@ -1,14 +1,14 @@
-<div class="container mt-5">
+<div class="container global-container-wrapper mt-3">
   <h1 style="font-size: 2em;">Chambres disponibles</h1>
-  <%# session[:nights_count_chosen] %>
+  <%#= session[:nights_count_chosen] %>
 </div>
 
-<div class="container my-5">
+<div class="container">
   <div class="row px-3 index-cards">
   <% @rooms.each do |room| %>
     <%= link_to room_path(room, lat: @address_coordinates.first, long: @address_coordinates.last), class:"text-decoration-none text-dark d-inline-block w-100" do %>
     <%= render "room", room: room %>
     <% end %>
   <% end %>
-  <%= link_to 'Modifier mes choix', edit_seeker_offered_services_path, class: "btn btn-gradient btn-block btn-lg mb-3 d-inline-block" %>
+  <%= link_to 'Modifier mes choix', edit_seeker_offered_services_path, class: "btn btn-gradient btn-block btn-lg mb-3 d-inline-block mt-3" %>
 </div>
