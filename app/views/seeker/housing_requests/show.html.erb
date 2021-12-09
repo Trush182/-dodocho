@@ -27,28 +27,24 @@
       </a>
     </div>
 
-      <br>
-
-      <div class="card-description-wrapper flex-grow-1">
-
+    <div class="card-description-wrapper flex-grow-1">
+      <div class="coordinates">
         <% if @can_see_details %>
-          <p>Retrouvez moi au <a target="_blank" href="<%= "https://www.google.com/maps?saddr=My+location&daddr=#{@room.address}" %>"><%= @room.address %></a></p>
+          <p>Retrouvez moi au <a target="_blank" href="<%= "https://www.google.com/maps/dir//#{@room.address}" %>"><%= @room.address %></a></p>
           <p>Me contacter au <a href="<%=  "tel:#{@room.host.phone_number}" %>"><%=@room.host.phone_number%></a></p>
         <% end %>
       </div>
+    </div>
 
     <div class="mt-3 py-3 container card-background rounded flex-column d-flex flex-grow-1">
-
       <div class="text-warning d-flex align-self-end font-weight-bold 1.8rem mb-3">
-      </div>
+    </div>
 
-      <div class="card-footer-description-wrapper d-flex justify-content-around px-3 mx-auto py-3 row">
-        <h4><%= @room.title %></h4>
-        <br>
-        <p><%= @room.summary %></p>
-      </div>
-
-
+    <div class="card-footer-description-wrapper d-flex justify-content-around px-3 mx-auto py-3 row">
+      <h4><%= @room.title %></h4>
+      <br>
+      <p><%= @room.summary %></p>
+    </div>
 
       <br>
 
@@ -65,7 +61,6 @@
         <% if @room.has_personal_bathroom %>
           <i class="fas fa-1x fa-sink mr-2"></i>
         <% end %>
-
       </div>
 
       <%= link_to "Revenir à mes demandes", seeker_housing_requests_path, class: "btn btn-gradient btn-block btn-lg mt-5" %>
