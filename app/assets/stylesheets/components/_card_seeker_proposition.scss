@@ -37,15 +37,6 @@ input:checked + .card-service--crafting {
     opacity: 1;
     color: #2A167B;
   }
-
-  .card-service-icon-wrapper--shower {
-    background-color: #B3E7F3;
-  }
-
-  .card-service-icon-wrapper--gardening {
-    background-color: rgba(111, 207, 151, 0.31);
-
-  }
 }
 
 input:checked + .card-service--gardening {
