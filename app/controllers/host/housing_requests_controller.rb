@@ -56,4 +56,5 @@ class Host::HousingRequestsController < ApplicationController
   #   @housing_request = HousingRequest.find(params[:id])
   # end
 
+  # for a commit
 end
