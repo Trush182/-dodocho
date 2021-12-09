@@ -1,7 +1,4 @@
-
-
-
-<div class="container host-create d-flex flex-column h-100 py-3">
+<div class="container host-create d-flex flex-column py-3">
   <div class="host-1 flex-grow-1">
     <%= simple_form_for @room, url: host_rooms_path, method: :post do |f| %>
       <%# Desc %>
@@ -34,6 +31,8 @@
   </div>
 
   <div class="pb-3  container">
-
   </div>
 </div>
+
+<%= render "host/rooms/night" %>
+<%= render "host/rooms/equipements" %>

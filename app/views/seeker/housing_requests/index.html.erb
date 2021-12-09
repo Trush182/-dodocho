@@ -1,9 +1,9 @@
 <div class="container housing-request my-5">
   <div class="row px-3 index-housing-request">
     <h4 style="font-weight: bolder;">Mes demandes</h4>
-    <%  @requests.each do |request| %>
-      <%= link_to seeker_housing_request_path(request), class:"text-decoration-none text-dark d-inline-block w-100" do %>
-      <%= render "seeker/housing_requests/housing_requests", room: request.room, request: request %>
+    <%  @requests.each do |housing_request| %>
+      <%= link_to seeker_housing_request_path(housing_request), class:"text-decoration-none text-dark d-inline-block w-100" do %>
+      <%= render "seeker/housing_requests/housing_requests", room: housing_request.room, housing_request: housing_request %>
       <% end %>
     <% end %>
   </div>
