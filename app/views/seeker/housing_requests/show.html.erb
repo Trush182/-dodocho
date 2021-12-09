@@ -27,6 +27,14 @@
       </a>
     </div>
 
+    <div class="coordinates">
+      <% if @can_see_details %>
+        <p>Retrouvez moi au <%= @room.address %></p>
+        <p>Me contacter au <%= @room.host.phone_number %></p>
+      <% else %>
+        <p>Retrouvez les coordonnées ici lorsque l'host aura accepté votre demande de réservation.</p>
+      <% end %>
+    </div>
     <div class="mt-3 py-3 container card-background rounded flex-column d-flex flex-grow-1">
       <div class="text-warning d-flex align-self-end font-weight-bold 1.8rem mb-3">
       </div>
@@ -34,10 +42,7 @@
       <div class="card-description-wrapper flex-grow-1">
         <h4><%= @room.title %></h4>
         <p><%= @room.summary %></p>
-        <% if @can_see_details %>
-          <p>Retrouvez moi au <%= @room.address %></p>
-          <p>Me contacter au <%= @room.host.phone_number %></p>
-        <% end %>
+
       </div>
 
       <div class="card-footer-description-wrapper d-flex justify-content-around px-5 mx-auto py-3">
