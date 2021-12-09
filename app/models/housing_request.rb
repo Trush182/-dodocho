@@ -24,7 +24,7 @@ class HousingRequest < ApplicationRecord
         Client.messages.create(
                           from: '+16108970968',
                           to: '+33661634782',
-                          body: "Hey friend, you have a new request"
+                          body: 'Hey friend, you have a new request'
                         )
   end
 end
