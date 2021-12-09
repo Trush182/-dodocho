@@ -1,5 +1,3 @@
-
-
 class Host::HousingRequestsController < ApplicationController
   Client = Twilio::REST::Client.new('AC7985a1d987860c452b1b15da7440c284', '7f1c0d4bbf71513a512febee6685f710')
 
