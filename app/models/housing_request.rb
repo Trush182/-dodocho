@@ -1,8 +1,9 @@
 class HousingRequest < ApplicationRecord
   MAX_NIGHTS_COUNT = 3
   HOUR_BEFORE_POSTPONING_REQUESTS_TO_NEXT_DAY = 23
-  TwilioClient = Twilio::REST::Client.new(ENV['AC7985a1d987860c452b1b15da7440c284'], ENV['7f1c0d4bbf71513a512febee6685f710'])
+  Client = Twilio::REST::Client.new('AC7985a1d987860c452b1b15da7440c284', '7f1c0d4bbf71513a512febee6685f710')
 
+  require 'twilio-ruby'
 
   belongs_to :room
   belongs_to :seeker, class_name: "User"
@@ -21,15 +22,11 @@ class HousingRequest < ApplicationRecord
   private
 
   def send_message
-    TwilioClient.messages.create(
-                  # {self.seeker.name}
-                  from: '+12312448223',
-                  #  to: "#{self.guide.phone_number}"
-                  to: "+33661634782",
-                  body: "Thomas voudrait bien être hébergé chez toi! Go to http://www.dodocho.top/"
-                  )
+    Client.messages.create(
+      from: '+12312448223',
+      to: '+33661634782',
+      body: "Thomas voudrait bien être hébergé chez toi! Go to http://www.dodocho.top/"
+    )
   end
 
 end
-
-
