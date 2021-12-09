@@ -37,8 +37,6 @@
   }
 
   .navbar-toggler-icon:active{
-    -ms-transform: translateY(2px);
-    -webkit-transform: translateY(2px);
     transform: translateY(2px);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
     border-bottom: none;
