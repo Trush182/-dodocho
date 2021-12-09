@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   SEEKER_SERVICES = ["Jardinage", "Courses", "Bricolage", "Cuisine", "Animaux"]
   HOST_EQUIPMENTS = ["Douche", "TV", "Wifi", "Livres"]
+  require 'twilio-ruby'
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
