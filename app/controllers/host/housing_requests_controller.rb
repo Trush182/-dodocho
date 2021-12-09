@@ -1,5 +1,5 @@
 class Host::HousingRequestsController < ApplicationController
-  Client = Twilio::REST::Client.new('AC7985a1d987860c452b1b15da7440c284', '81b5f2213cbae5f346a74c7a4351576b')
+  Client = Twilio::REST::Client.new(ENV['TWILIO_ID'], ENV['TWILIO_TOKEN'])
 
   require 'twilio-ruby'
 
@@ -56,4 +56,5 @@ class Host::HousingRequestsController < ApplicationController
   #   @housing_request = HousingRequest.find(params[:id])
   # end
 
+  # for a commit
 end
