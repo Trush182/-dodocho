@@ -1,10 +1,19 @@
+$navbar-height: 56px;
+
+.global-content-wrapper {
+  min-height: calc(100vh - $navbar-height);
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   padding: 0;
+  height: $navbar-height;
+  position: relative;
+  z-index: 999;
 
   .top-nav {
     padding: .5rem 1rem;
-    width: -webkit-fill-available;
+    width: 100%;
     background: white;
     position: absolute;
     top: 0;
@@ -37,8 +46,6 @@
   }
 
   .navbar-toggler-icon:active{
-    -ms-transform: translateY(2px);
-    -webkit-transform: translateY(2px);
     transform: translateY(2px);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
     border-bottom: none;
