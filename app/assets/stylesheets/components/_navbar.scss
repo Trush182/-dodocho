@@ -1,10 +1,19 @@
+$navbar-height: 56px;
+
+.global-content-wrapper {
+  min-height: calc(100vh - $navbar-height);
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   padding: 0;
+  height: $navbar-height;
+  position: relative;
+  z-index: 999;
 
   .top-nav {
     padding: .5rem 1rem;
-    width: -webkit-fill-available;
+    width: 100%;
     background: white;
     position: absolute;
     top: 0;
