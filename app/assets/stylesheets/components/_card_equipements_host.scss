@@ -15,6 +15,47 @@
   background-color: rgba(111, 207, 151, 0.31);;
 }
 
-.input:checked + .card-service {
-  border: 1px solid red;
+input:checked + .card-service--shower {
+  border: 4px solid  #09B2D7;
+  box-shadow: 0px 1px grey !important;
+
+  .fas {
+    opacity: 1;
+    color: #09B2D7;
+
+  }
+}
+
+input:checked + .card-service--television {
+  border: 4px solid  #CF976F;
+  box-shadow: 0px 1px grey !important;
+
+  .fas {
+    opacity: 1;
+    color: #CF976F;
+
+  }
+}
+
+
+input:checked + .card-service--internet {
+  border: 4px solid #1b053f;
+  box-shadow: 0px 1px grey !important;
+
+  .fas {
+    opacity: 1;
+    color: #1b053f;
+
+  }
+}
+
+input:checked + .card-service--books {
+  border: 4px solid  #6FCF97;
+  box-shadow: 0px 1px grey !important;
+
+  .fas {
+    opacity: 1;
+    color: #6FCF97;
+
+  }
 }

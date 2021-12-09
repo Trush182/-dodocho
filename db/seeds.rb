@@ -178,7 +178,7 @@ room_luis.photos.attach(io: room_luis_profile_pic, filename: 'room_luis_3.jpg', 
 
 room_hubert = Room.new(
   host:                       hubert,
-  title:                      "Chambre d'ami à disposition",
+  title:                      "Chambre d'ami disponible",
   summary:                    "Je propose ma chambre d'ami inocupée en ce moment",
   address:                    "15, rue Robert Douineau 44300 SAINT SEBASTIEN SUR LOIRE",
   housing_type:               "personal room",
@@ -201,7 +201,7 @@ room_hubert.photos.attach(io: room_hubert_profile_pic, filename: 'room_hubert_3.
 
 room_firas = Room.new(
   host:                       firas,
-  title:                      "Canapé à disposition dans mon studio pour quelqu",
+  title:                      "Canapé libre",
   summary:                    "Mon canapé est libre si vous avez besoin de dormir au chaud.",
   address:                    "8, rue Georges Clémenceau 44000 NANTES",
   housing_type:               "personal room",
