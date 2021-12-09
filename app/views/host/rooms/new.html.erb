@@ -1,4 +1,4 @@
-<div class="container host-create d-flex flex-column py-3">
+<div class="host-profile container host-create d-flex flex-column py-3">
   <div class="host-1 flex-grow-1">
     <%= simple_form_for @room, url: host_rooms_path, method: :post do |f| %>
       <%# Desc %>
@@ -16,23 +16,34 @@
             <h2 class="bu" style="font-size:1em;">Une photo de votre demeure est un signe de crédibilité</h2>
           </div>
         </div>
-        
+
       </div>
       <%# Equipements %>
-      <div class="page-2 h-100">
+      <div class="my-4 page-2 h-100">
+        <h4>Les équipements dont la chambre dispose</h4>
+          <div class="d-flex flex-column h-100">
+            <% User::HOST_EQUIPMENTS.each do |equipment| %>
+              <div class="my-2 for-check col-12">
+                <input class="form-check-input is-valid check_boxes optional d-none" type="checkbox" value="<%= equipment %>" name="user[equipments][]" id="user_equipments_<%= equipment.downcase %>">
+                <label for="user_equipments_<%= equipment.downcase %>" class="card-service card-service--<%= equipment_name_to_skill(equipment) %> flex-grow-1 shadow">
+                  <div class="card-service-icon-wrapper card-service-icon-wrapper---<%= equipment_name_to_skill(equipment) %>"><%= image_tag("service-icons/#{equipment_name_to_skill(equipment)}.svg") %></div>
+                    <div class="d-flex infos-services">
+                      <div class="card-service-description-wrapper"><%= equipment %></div>
+                      <i class="fas fa-check"></i>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <% end %>
+          </div>
 
-      </div>
       <%# Nuits %>
       <div class="page-3 h-100">
-
-        <%= f.submit "Valider", class: "btn btn-gradient btn-block btn-lg mt-5" %>
+        <%= render "host/rooms/night"%>
       </div>
     <% end %>
   </div>
 
-  <div class="pb-3  container">
+    <div class="pb-3  container">
   </div>
 </div>
-
-<%= render "host/rooms/night" %>
-<%= render "host/rooms/equipements" %>

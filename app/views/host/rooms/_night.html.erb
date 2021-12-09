@@ -5,9 +5,9 @@
         <span class="input-group-text py-6 mb-4" id="basic-addon1">
           <i class="fas fa-map-marker-alt"></i>
         </span>
-        <%= text_field_tag "search_infos[address]",
+        <%= text_field_tag "night_proposal[address]",
           params.dig(:search_infos, :address),
-          placeholder: "Où est-ce que je me trouve ?",
+          placeholder: "Mon adresse",
           class: "form-control"
         %>
 
@@ -18,8 +18,8 @@
           <div class="mt-4">
           <br>
 
-            <input class="d-none" type="radio" value="<%= nights_count %>" name="search_infos[nights_count]" id="<%= "search_infos_nights_count_#{nights_count}" %>">
-            <label for="<%= "search_infos_nights_count_#{nights_count}" %>" class="card-moon-night">
+            <input class="d-none" type="radio" value="<%= nights_count %>" name="night_proposal[nights_count]" id="<%= "night_proposal_nights_count_#{nights_count}" %>">
+            <label for="<%= "night_proposal_nights_count_#{nights_count}" %>" class="card-moon-night">
               <div class="card-moon-night-icon-wrapper"><%= image_tag('moon-stars.svg', width: 48) %></div>
               <p class="card-moon-night-description-wrapper pl-1 ">
                 <%= "Une" if nights_count == 1 %>

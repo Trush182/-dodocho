@@ -1,9 +1,9 @@
 class Host::NightProposalsController < ApplicationController
-def edit
+  def edit
+  end
 
-end
-
-def update
-
-end
+  def update
+    
+    
+  end
 end
