@@ -22,7 +22,7 @@ class HousingRequest < ApplicationRecord
 
   def send_message
         Client.messages.create(
-                          from: '+12312448223',
+                          from: '+16108970968',
                           to: '+33661634782',
                           body: "Hey friend, you have a new request"
                         )

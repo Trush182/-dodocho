@@ -14,7 +14,7 @@ class Host::HousingRequestsController < ApplicationController
     @housing_request.save
 
     Client.messages.create(
-                         from: '+12312448223',
+                         from: '+16108970968',
                           to: '+33661634782',
                           body: "Hey friend, it is accepted"
                         )
@@ -36,7 +36,7 @@ class Host::HousingRequestsController < ApplicationController
     @housing_request.save
 
     Client.messages.create(
-                         from: '+12312448223',
+                         from: '+16108970968',
                           to: '+33661634782',
                           body: "Hey friend, it is declined"
                         )
