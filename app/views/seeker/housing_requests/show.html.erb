@@ -29,7 +29,7 @@
 
     <% if @can_see_details %>
       <div class="mt-3 rounded shadow coordinates">
-        <h5>Les coordonnées de votre hôte</h5>
+        <h5>Les coordonnées de <%= @room.host.name %>, votre hôte</h5>
         <p class="d-flex align-items-center">
           <i class="fas fa-map-marker-alt mr-2 fa-fw"></i>
           <a target="_blank" href="<%= "https://www.google.com/maps/dir//#{@room.address}" %>"><%= @room.address %></a>
