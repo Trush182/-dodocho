@@ -28,10 +28,10 @@
     </div>
 
     <div class="card-description-wrapper flex-grow-1">
-      <div class="coordinates">
+      <div class="coordinates justify-content-space-evenly">
         <% if @can_see_details %>
-          <p>Retrouvez moi au <a target="_blank" href="<%= "https://www.google.com/maps/dir//#{@room.address}" %>"><%= @room.address %></a></p>
-          <p>Me contacter au <a href="<%=  "tel:#{@room.host.phone_number}" %>"><%=@room.host.phone_number%></a></p>
+          <p><i class="fas fa-map-marker-alt"></i> <a target="_blank" href="<%= "https://www.google.com/maps/dir//#{@room.address}" %>"><%= @room.address %></a></p>
+          <p><i class="fas fa-phone"></i> <a href="<%=  "tel:#{@room.host.phone_number}" %>"><%=@room.host.phone_number%></a></p>
         <% end %>
       </div>
     </div>
@@ -45,6 +45,7 @@
       <br>
       <br>
       <p><%= @room.summary %></p>
+
     </div>
 
       <br>
