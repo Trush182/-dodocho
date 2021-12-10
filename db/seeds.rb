@@ -202,8 +202,8 @@ room_hubert.photos.attach(io: room_hubert_profile_pic, filename: 'room_hubert_3.
 room_firas = Room.new(
   host:                       firas,
   title:                      "Canapé libre",
-  summary:                    "Mon canapé est libre si vous avez besoin de dormir au chaud.",
-  address:                    "8, rue Georges Clémenceau 44000 NANTES",
+  summary:                    "Mon canapé est libre si vous avez besoin de dormir au chaud. Situé proche de la gare donc facilement accessible.",
+  address:                    "4, rue Georges Clémenceau 44000 NANTES",
   housing_type:               "personal room",
   giveaway_description:       "",
   has_books:                  true,
