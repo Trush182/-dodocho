@@ -8,3 +8,4 @@ class Seeker::SearchInfosController < ApplicationController
     redirect_to rooms_path(address: params[:search_infos][:address])
   end
 end
+
