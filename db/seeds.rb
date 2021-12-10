@@ -23,7 +23,8 @@ thomas = User.create!(
   description: "J'ai besoin de dormir 2 nuits quelque part",
   email: "thomas@gmail.com",
   password: "secret",
-  profile_image: "#"
+  profile_image: "#",
+  phone_number: "+33620922803"
 )
 
 thomas_profile_pic = File.open(Rails.root.join('db/fixtures/users', 'thomas.jpg'))
@@ -49,7 +50,7 @@ firas = User.create!(
   email: "firas@gmail.com",
   password: "secret",
   profile_image: "#",
-  phone_number: "0657197768"
+  phone_number: "+33661634782"
 )
 
 firas_profile_pic = File.open(Rails.root.join('db/fixtures/users', 'firas.jpg'))
@@ -61,7 +62,7 @@ romain = User.create!(
   email: "romain@gmail.com",
   password: "secret",
   profile_image: "#",
-  phone_number: "0615717634"
+  phone_number: "+33615717634"
 )
 
 romain_profile_pic = File.open(Rails.root.join('db/fixtures/users', 'romain.jpg'))
@@ -73,7 +74,7 @@ josiane = User.create!(
   email: "josiane@gmail.com",
   password: "secret",
   profile_image: "#",
-  phone_number: "0682964512"
+  phone_number: "+33682964512"
 )
 
 josiane_profile_pic = File.open(Rails.root.join('db/fixtures/users', 'josiane.jpg'))
@@ -85,7 +86,7 @@ luis = User.create!(
   email: "luis@gmail.com",
   password: "secret",
   profile_image: "#",
-  phone_number: "0648505253"
+  phone_number: "+33648505253"
 )
 
 luis_profile_pic = File.open(Rails.root.join('db/fixtures/users', 'luis.jpg'))
@@ -97,7 +98,7 @@ hubert = User.create!(
   email: "hubert@gmail.com",
   password: "secret",
   profile_image: "#",
-  phone_number: "0610193033"
+  phone_number: "+33610193033"
 )
 
 hubert_profile_pic = File.open(Rails.root.join('db/fixtures/users', 'hubert.jpg'))

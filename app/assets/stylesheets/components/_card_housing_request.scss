@@ -120,7 +120,16 @@
 }
 
 .coordinates {
-  margin: 2rem;
+  border: 2px solid #f05d28;
+  padding: 1rem;
+
+  p {
+    padding-right: 2rem;
+
+    a {
+      color: rgba(40, 40, 40, 0.9);
+    }
+  }
 }
 
 .card-background {

@@ -14,10 +14,11 @@ class Host::HousingRequestsController < ApplicationController
     @housing_request.save
 
     Client.messages.create(
-                         from: '+16108970968',
-                          to: '+33661634782',
-                          body: "Hey friend, it is accepted"
-                        )
+      from: '+16108970968',
+      to: @housing_request.seeker.phone_number || "+33620922803",
+      body: "Votre demande d'hébergement a été acceptée. \
+             Vous pouvez vous connecter sur www.dodocho.top pour voir les coordonnées de votre hôte."
+    )
     redirect_to host_housing_requests_path
   end
 

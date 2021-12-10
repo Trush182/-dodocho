@@ -21,10 +21,10 @@ class HousingRequest < ApplicationRecord
   private
 
   def send_message
-        Client.messages.create(
-                          from: '+16108970968',
-                          to: '+33661634782',
-                          body: 'Hey friend, you have a new request'
-                        )
+    Client.messages.create(
+      from: '+16108970968',
+      to: host.phone_number || "+33661634782",
+      body: "Bonjour, vous avez une d'hébergement de la part de #{seeker&.name}! Vous pouvez vous connectez sur www.dodocho.top afin de lui répondre."
+    )
   end
 end

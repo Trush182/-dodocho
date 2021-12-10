@@ -1,4 +1,5 @@
 <div class="container housing-request">
+  <%= current_user.email %>
   <div class="row px-3 index-housing-request">
     <h4 style="font-weight: bolder;">Mes demandes</h4>
     <%  @requests.each do |housing_request| %>
