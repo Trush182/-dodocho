@@ -37,10 +37,10 @@ class Host::HousingRequestsController < ApplicationController
     @housing_request.save
 
     Client.messages.create(
-                         from: '+16108970968',
-                          to: '+33661634782',
-                          body: "Hey friend, it is declined"
-                        )
+      from: '+16108970968',
+      to: seeker.phone_number,
+      body: "Désolé, votre demande d'hébergement à été refusée."
+    )
     redirect_to host_housing_requests_path
   end
 
@@ -57,5 +57,4 @@ class Host::HousingRequestsController < ApplicationController
   #   @housing_request = HousingRequest.find(params[:id])
   # end
 
-  # for a commit
 end
