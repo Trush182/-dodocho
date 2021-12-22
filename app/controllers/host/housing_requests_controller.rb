@@ -15,7 +15,7 @@ class Host::HousingRequestsController < ApplicationController
 
     Client.messages.create(
       from: '+16108970968',
-      to: @housing_request.seeker.phone_number || "+33620922803",
+      to: @housing_request.seeker.phone_number,
       body: "Votre demande d'hébergement a été acceptée. \
              Vous pouvez vous connecter sur www.dodocho.top pour voir les coordonnées de votre hôte."
     )
@@ -38,7 +38,7 @@ class Host::HousingRequestsController < ApplicationController
 
     Client.messages.create(
       from: '+16108970968',
-      to: seeker.phone_number,
+      to: @housing_request.seeker.phone_number,
       body: "Désolé, votre demande d'hébergement à été refusée."
     )
     redirect_to host_housing_requests_path
